@@ -1,50 +1,50 @@
 data TisAnInteger = 
-    TisAn Integer 
+  TisAn Integer 
 
 instance Eq TisAnInteger where 
-    (==) (TisAn a) (TisAn b) = a == b
+  (==) (TisAn a) (TisAn b) = a == b
 
 data TwoIntegers =
-    Two Integer Integer
+  Two Integer Integer
 
 instance Eq TwoIntegers where
-    (==) (Two a b) (Two a' b') = a == a' && b == b'
+  (==) (Two a b) (Two a' b') = a == a' && b == b'
 
 data StringOrInt =
-    TisAnInt    Int 
+  TisAnInt  Int 
   | TisAString  String
 
 instance Eq StringOrInt where
-    (==) (TisAnInt a) (TisAnInt b) = a == b
-    (==) (TisAString a) (TisAString b) = a == b
-    (==) _ _ = False
+  (==) (TisAnInt a) (TisAnInt b) = a == b
+  (==) (TisAString a) (TisAString b) = a == b
+  (==) _ _ = False
 
 data Pair a =
-    Pair a a
+  Pair a a
 
 instance Eq a => Eq (Pair a) where
-    (==) (Pair v v') (Pair w w') = v == w && v' == w'
+  (==) (Pair v v') (Pair w w') = v == w && v' == w'
 
 data Tuple a b =
-    Tuple a b
+  Tuple a b
 
 instance (Eq a, Eq b) => Eq (Tuple a b) where
-    (==) (Tuple v v') (Tuple w w') = v == w && v' == w'
+  (==) (Tuple v v') (Tuple w w') = v == w && v' == w'
 
 data Which a =
-    ThisOne a
+  ThisOne a
   | ThatOne a
 
 instance (Eq a) => Eq (Which a) where 
-    (==) (ThisOne v) (ThisOne v') = v == v'
-    (==) (ThatOne v) (ThatOne v') = v == v'
-    (==) _ _ = False
+  (==) (ThisOne v) (ThisOne v') = v == v'
+  (==) (ThatOne v) (ThatOne v') = v == v'
+  (==) _ _ = False
 
 data EitherOr a b =
-    Hello a
+  Hello a
   | Goodbye b
 
 instance (Eq a, Eq b) => Eq (EitherOr a b) where
-    (==) (Hello v) (Hello v')       = v == v'
-    (==) (Goodbye v) (Goodbye v')   = v == v'
-    (==) _ _ = False
+  (==) (Hello v) (Hello v')     = v == v'
+  (==) (Goodbye v) (Goodbye v')   = v == v'
+  (==) _ _ = False

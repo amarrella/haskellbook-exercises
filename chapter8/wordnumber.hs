@@ -17,9 +17,9 @@ digitToWord _ = error "use a number from 0 to 9"
 
 digits :: Int -> [Int]
 digits num = go num []
-        where go n acc
-                | n < 10 = ((n `mod` 10) : acc)
-                | otherwise = go (n `div` 10) ((n `mod` 10) : acc)
+    where go n acc
+        | n < 10 = ((n `mod` 10) : acc)
+        | otherwise = go (n `div` 10) ((n `mod` 10) : acc)
 
 wordNumber :: Int -> String
 wordNumber = concat . intersperse "-" . map digitToWord . digits

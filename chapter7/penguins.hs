@@ -1,5 +1,5 @@
 data WherePenguinsLive =
-    Galapagos
+  Galapagos
   | Antarctica
   | Australia
   | SouthAfrica
@@ -7,27 +7,27 @@ data WherePenguinsLive =
   deriving (Eq, Show)
 
 data Penguin =
-    Peng WherePenguinsLive
-    deriving (Eq, Show)
+  Peng WherePenguinsLive
+  deriving (Eq, Show)
 
 isSouthAfrica :: WherePenguinsLive -> Bool
 isSouthAfrica SouthAfrica   = True
-isSouthAfrica _             = False
+isSouthAfrica _       = False
 
 gimmeWhereTheyLive :: Penguin
-                   -> WherePenguinsLive
+           -> WherePenguinsLive
 gimmeWhereTheyLive (Peng whereitlives) = 
-    whereitlives
+  whereitlives
 
 galapagosPenguin :: Penguin -> Bool
 galapagosPenguin (Peng Galapagos)   = True
-galapagosPenguin _                  = False
+galapagosPenguin _          = False
 
 antarcticPenguin :: Penguin -> Bool
 antarcticPenguin (Peng Antarctica)  = True
-antarcticPenguin _                  = False
+antarcticPenguin _          = False
 
 antarcticOrGalapagos :: Penguin -> Bool
 antarcticOrGalapagos p =
-        (galapagosPenguin p)
-    ||  (antarcticPenguin p)
+    (galapagosPenguin p)
+  ||  (antarcticPenguin p)

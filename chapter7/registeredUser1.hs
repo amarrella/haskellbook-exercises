@@ -4,5 +4,5 @@ newtype Username = Username String
 newtype AccountNumber = AccountNumber Integer
 
 data User =
-    UnregisteredUser
+  UnregisteredUser
   | RegisteredUser Username AccountNumber

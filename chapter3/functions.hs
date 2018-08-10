@@ -10,4 +10,4 @@ letterIndex x = "Curry is awesome!" !! x
 
 rvrs :: String -> String
 rvrs a = 
-    drop 9 a ++ take 4 (drop 5 a) ++ take 5 a
+  drop 9 a ++ take 4 (drop 5 a) ++ take 5 a
