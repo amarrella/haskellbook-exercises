@@ -84,3 +84,9 @@ main = hspec $ do
        \ greater than x" $ do
        property $ \x -> x + 1 > (x :: Int)
        
+-- QuickCheck without Hspec
+prop_additionGreater :: Int -> Bool
+prop_additionGreater x = x + 1 > x
+
+runQc :: IO ()
+runQc = quickCheck prop_additionGreater
