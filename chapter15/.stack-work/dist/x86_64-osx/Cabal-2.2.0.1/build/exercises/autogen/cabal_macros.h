@@ -155,7 +155,7 @@
 #endif /* MIN_TOOL_VERSION_runghc */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "exercises-0.1.0.0-3V7KEVDCujmEnKtC7hHVaq-optional"
+#define CURRENT_COMPONENT_ID "exercises-0.1.0.0-EmpMtNQhl2X1NtdwJeuwcq-exercises"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"
