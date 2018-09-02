@@ -18,36 +18,17 @@ type TrivAssoc =
 
 -- 2
 newtype Identity a = Identity a deriving (Eq, Show)
-newtype FirstId a = 
-  FirstId {getFirst :: Identity a} deriving (Eq, Show)
-newtype LastId a = 
-  LastId {getLast :: Identity a} deriving (Eq, Show)
 
-instance Semigroup (FirstId a) where
-  (FirstId x) <> _ = FirstId x
-instance Semigroup (LastId a) where
-  _ <> (LastId y) = LastId y
+instance Semigroup a => Semigroup (Identity a) where
+  (Identity x) <> (Identity y) = Identity (x <> y)
 
-type FirstIdAssoc a =
-  FirstId a -> FirstId a -> FirstId a -> Bool
-
-type LastIdAssoc a =
-  LastId a -> LastId a -> LastId a -> Bool
+type IdentityAssoc a =
+  Identity a -> Identity a -> Identity a -> Bool
 
 instance Arbitrary a => Arbitrary (Identity a) where
   arbitrary = do
     a <- arbitrary
     return (Identity a)
-
-instance Arbitrary a => Arbitrary (FirstId a) where
-  arbitrary = do
-    a <- arbitrary
-    return (FirstId a)
-
-instance Arbitrary a => Arbitrary (LastId a) where
-  arbitrary = do
-    a <- arbitrary
-    return (LastId a)
 
 -- 3
 data Two a b = Two a b deriving (Eq, Show)
@@ -66,6 +47,5 @@ instance (Arbitrary a, Arbitrary b) => Arbitrary (Two a b) where
 main :: IO ()
 main = do
   quickCheck (semigroupAssoc :: TrivAssoc)
-  quickCheck (semigroupAssoc :: FirstIdAssoc Integer)
-  quickCheck (semigroupAssoc :: LastIdAssoc Integer)
+  quickCheck (semigroupAssoc :: IdentityAssoc String)
   quickCheck (semigroupAssoc :: TwoAssoc Trivial String)
