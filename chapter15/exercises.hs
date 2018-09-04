@@ -137,6 +137,9 @@ instance (Semigroup a, Semigroup b) => Semigroup (Combine a b) where
 type CombineAssoc a b =
   (Combine a b) -> (Combine a b) -> (Combine a b) -> Bool
 
+instance (Arbitrary a) => Arbitrary (Combine a (Sum(a))) where 
+  arbitrary = return $ Combine Sum
+
 --  (╯°□°）╯︵ ┻━┻
 
 main :: IO ()
