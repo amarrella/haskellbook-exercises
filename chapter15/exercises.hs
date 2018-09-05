@@ -137,11 +137,27 @@ instance (Semigroup a, Semigroup b) => Semigroup (Combine a b) where
 type CombineAssoc a b =
   (Combine a b) -> (Combine a b) -> (Combine a b) -> Bool
 
-instance (Arbitrary a) => Arbitrary (Combine a (Sum(a))) where 
-  arbitrary = return $ Combine Sum
+-- instance (Arbitrary a) => Arbitrary (Combine a (Sum(a))) where 
+--  arbitrary = return $ Combine Sum
+-- (╯°□°）╯︵ ┻━┻
 
---  (╯°□°）╯︵ ┻━┻
+-- 10 
+newtype Comp a =
+  Comp { unComp :: (a -> a) }
 
+instance Semigroup (Comp a) where 
+  (Comp f) <> (Comp g) = Comp (f . g)
+
+type CompAssoc a =
+  (Comp a) -> (Comp a) -> (Comp a) -> Bool
+
+instance (Arbitrary a, CoArbitrary a) => Arbitrary (Comp a) where
+  arbitrary = do
+    a <- arbitrary
+    return (Comp a)
+
+-- TODO finish 9 and 10
+  
 main :: IO ()
 main = do
   quickCheck (semigroupAssoc :: TrivAssoc)
@@ -152,6 +168,7 @@ main = do
   quickCheck (semigroupAssoc :: BoolConjAssoc)
   quickCheck (semigroupAssoc :: BoolDisjAssoc)
   quickCheck (semigroupAssoc :: OrAssoc String Trivial)
-  quickCheck (semigroupAssoc :: CombineAssoc (Sum Integer) (Sum Integer))
+  --quickCheck (semigroupAssoc :: CombineAssoc (Sum Integer) (Sum Integer))
+  quickCheck (semigroupAssoc :: CompAssoc ((Sum Integer) -> (Sum Integer)))
 
 

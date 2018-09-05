@@ -29,12 +29,12 @@ version :: Version
 version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "/Users/amarrella/Learning/haskellbook-exercises/chapter15/.stack-work/install/x86_64-osx/lts-12.9/8.4.3/bin"
-libdir     = "/Users/amarrella/Learning/haskellbook-exercises/chapter15/.stack-work/install/x86_64-osx/lts-12.9/8.4.3/lib/x86_64-osx-ghc-8.4.3/exercises-0.1.0.0-EmpMtNQhl2X1NtdwJeuwcq-exercises"
-dynlibdir  = "/Users/amarrella/Learning/haskellbook-exercises/chapter15/.stack-work/install/x86_64-osx/lts-12.9/8.4.3/lib/x86_64-osx-ghc-8.4.3"
-datadir    = "/Users/amarrella/Learning/haskellbook-exercises/chapter15/.stack-work/install/x86_64-osx/lts-12.9/8.4.3/share/x86_64-osx-ghc-8.4.3/exercises-0.1.0.0"
-libexecdir = "/Users/amarrella/Learning/haskellbook-exercises/chapter15/.stack-work/install/x86_64-osx/lts-12.9/8.4.3/libexec/x86_64-osx-ghc-8.4.3/exercises-0.1.0.0"
-sysconfdir = "/Users/amarrella/Learning/haskellbook-exercises/chapter15/.stack-work/install/x86_64-osx/lts-12.9/8.4.3/etc"
+bindir     = "/Users/ale/Learning/haskellbook/chapter15/.stack-work/install/x86_64-osx/lts-12.9/8.4.3/bin"
+libdir     = "/Users/ale/Learning/haskellbook/chapter15/.stack-work/install/x86_64-osx/lts-12.9/8.4.3/lib/x86_64-osx-ghc-8.4.3/exercises-0.1.0.0-EmpMtNQhl2X1NtdwJeuwcq-exercises"
+dynlibdir  = "/Users/ale/Learning/haskellbook/chapter15/.stack-work/install/x86_64-osx/lts-12.9/8.4.3/lib/x86_64-osx-ghc-8.4.3"
+datadir    = "/Users/ale/Learning/haskellbook/chapter15/.stack-work/install/x86_64-osx/lts-12.9/8.4.3/share/x86_64-osx-ghc-8.4.3/exercises-0.1.0.0"
+libexecdir = "/Users/ale/Learning/haskellbook/chapter15/.stack-work/install/x86_64-osx/lts-12.9/8.4.3/libexec/x86_64-osx-ghc-8.4.3/exercises-0.1.0.0"
+sysconfdir = "/Users/ale/Learning/haskellbook/chapter15/.stack-work/install/x86_64-osx/lts-12.9/8.4.3/etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "exercises_bindir") (\_ -> return bindir)
