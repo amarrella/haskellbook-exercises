@@ -1,5 +1,6 @@
 import Test.QuickCheck
 import Data.Semigroup
+import Laws
 -- 1
 data Trivial = Trivial deriving (Eq, Show) 
 
@@ -8,11 +9,6 @@ instance Semigroup Trivial where
 
 instance Arbitrary Trivial where
   arbitrary = return Trivial
-
-semigroupAssoc  :: (Eq m, Semigroup m) 
-                => m -> m -> m -> Bool
-semigroupAssoc a b c =
-  (a <> (b <> c)) == ((a <> b) <> c)
 
 type TrivAssoc =
   Trivial -> Trivial -> Trivial -> Bool
@@ -157,7 +153,25 @@ instance (Arbitrary a, CoArbitrary a) => Arbitrary (Comp a) where
     return (Comp a)
 
 -- TODO finish 9 and 10
-  
+
+data Validation a b = 
+  Failure' a | Success' b 
+  deriving (Eq, Show)
+
+instance Semigroup a => Semigroup (Validation a b) where
+  (Success' a) <> _ = Success' a
+  (Failure' a) <> (Failure' b) = Failure' $ a <> b
+  _ <> (Success' b) = Success' b
+
+instance (Arbitrary a, Arbitrary b) => Arbitrary (Validation a b) where
+  arbitrary = do
+    a <- arbitrary
+    b <- arbitrary
+    elements [(Failure' a), (Success' b)]
+
+type ValidationAssoc a b =
+  (Validation a b) -> (Validation a b) -> (Validation a b) -> Bool
+
 main :: IO ()
 main = do
   quickCheck (semigroupAssoc :: TrivAssoc)
@@ -169,6 +183,8 @@ main = do
   quickCheck (semigroupAssoc :: BoolDisjAssoc)
   quickCheck (semigroupAssoc :: OrAssoc String Trivial)
   --quickCheck (semigroupAssoc :: CombineAssoc (Sum Integer) (Sum Integer))
-  quickCheck (semigroupAssoc :: CompAssoc ((Sum Integer) -> (Sum Integer)))
+  --quickCheck (semigroupAssoc :: CompAssoc ((Sum Integer) -> (Sum Integer)))
+  quickCheck (semigroupAssoc :: ValidationAssoc String Integer)
+
 
 
