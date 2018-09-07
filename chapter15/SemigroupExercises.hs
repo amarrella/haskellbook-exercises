@@ -1,4 +1,6 @@
-import Test.QuickCheck
+module SemigroupExercises where
+
+import Test.QuickCheck(Arbitrary, CoArbitrary, arbitrary, elements)
 import Data.Semigroup
 import Laws
 -- 1
@@ -155,36 +157,19 @@ instance (Arbitrary a, CoArbitrary a) => Arbitrary (Comp a) where
 -- TODO finish 9 and 10
 
 data Validation a b = 
-  Failure' a | Success' b 
+  Failure a | Success b 
   deriving (Eq, Show)
 
 instance Semigroup a => Semigroup (Validation a b) where
-  (Success' a) <> _ = Success' a
-  (Failure' a) <> (Failure' b) = Failure' $ a <> b
-  _ <> (Success' b) = Success' b
+  (Success a) <> _ = Success a
+  (Failure a) <> (Failure b) = Failure $ a <> b
+  _ <> (Success b) = Success b
 
 instance (Arbitrary a, Arbitrary b) => Arbitrary (Validation a b) where
   arbitrary = do
     a <- arbitrary
     b <- arbitrary
-    elements [(Failure' a), (Success' b)]
+    elements [(Failure a), (Success b)]
 
 type ValidationAssoc a b =
   (Validation a b) -> (Validation a b) -> (Validation a b) -> Bool
-
-main :: IO ()
-main = do
-  quickCheck (semigroupAssoc :: TrivAssoc)
-  quickCheck (semigroupAssoc :: IdentityAssoc String)
-  quickCheck (semigroupAssoc :: TwoAssoc Trivial String)
-  quickCheck (semigroupAssoc :: ThreeAssoc Trivial String Trivial)
-  quickCheck (semigroupAssoc :: FourAssoc Trivial String Trivial String)
-  quickCheck (semigroupAssoc :: BoolConjAssoc)
-  quickCheck (semigroupAssoc :: BoolDisjAssoc)
-  quickCheck (semigroupAssoc :: OrAssoc String Trivial)
-  --quickCheck (semigroupAssoc :: CombineAssoc (Sum Integer) (Sum Integer))
-  --quickCheck (semigroupAssoc :: CompAssoc ((Sum Integer) -> (Sum Integer)))
-  quickCheck (semigroupAssoc :: ValidationAssoc String Integer)
-
-
-

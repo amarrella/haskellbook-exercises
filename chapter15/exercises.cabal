@@ -4,7 +4,9 @@ build-type:          Simple
 cabal-version:       >=1.10
 library
   other-modules:
-      Laws
+      Laws,
+      SemigroupExercises,
+      MonoidExercises
   ghc-options:
       -Wall -fwarn-tabs
   hs-source-dirs:
@@ -15,21 +17,9 @@ library
     , QuickCheck
   default-language: Haskell2010
 
-test-suite optional
+test-suite tests
   type: exitcode-stdio-1.0
-  main-is: optional.hs
-  hs-source-dirs:
-      .
-  ghc-options:
-      -Wall -fno-warn-orphans
-  build-depends:
-      base >=4.7 && <5
-    , QuickCheck
-  default-language: Haskell2010
-
-test-suite SemigroupExercises
-  type: exitcode-stdio-1.0
-  main-is: SemigroupExercises.hs
+  main-is: tests.hs
   hs-source-dirs:
       .
   ghc-options:
