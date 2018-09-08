@@ -1,0 +1,2820 @@
+
+==================== FINAL INTERFACE ====================
+2018-09-08 13:14:05.21651 UTC
+
+interface chapter16-0.1.0.0-5XgB7WzA3TFGiEioj7RtiQ:FunctorExercises 8043
+  interface hash: 7316c04c248a4e040fec0c3f73b59d84
+  ABI hash: 869d32ee02bdfb532bb195bde30f6086
+  export-list hash: dfa8ddff697e12c821ed19e27b90d76b
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 3ca0e9ce8abe674dfb91bcf1ae79f576
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  FunctorExercises.Four{FunctorExercises.Four}
+  FunctorExercises.Four'{FunctorExercises.Four'}
+  FunctorExercises.Identity{FunctorExercises.Identity}
+  FunctorExercises.Pair{FunctorExercises.Pair}
+  FunctorExercises.Three{FunctorExercises.Three}
+  FunctorExercises.Three'{FunctorExercises.Three'}
+  FunctorExercises.Two{FunctorExercises.Two}
+module dependencies:
+package dependencies: QuickCheck-2.11.3 array-0.5.2.0
+                      base-4.11.1.0* containers-0.5.11.0 deepseq-1.4.3.0
+                      ghc-boot-th-8.4.3 ghc-prim-0.5.2.0 integer-gmp-1.0.2.0
+                      pretty-1.1.3.6 primitive-0.6.3.0 random-1.1
+                      template-haskell-2.13.0.0 tf-random-0.5 time-1.8.0.2
+                      transformers-0.5.5.0
+orphans: transformers-0.5.5.0:Control.Monad.Trans.Error
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.11.1.0:GHC.Float
+         base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Complex base-4.11.1.0:Data.Functor.Compose
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity
+                         base-4.11.1.0:Data.Functor.Product base-4.11.1.0:Data.Functor.Sum
+                         base-4.11.1.0:Data.Monoid base-4.11.1.0:Data.Semigroup
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:Data.Version
+                         base-4.11.1.0:Data.Void base-4.11.1.0:GHC.Exts
+                         base-4.11.1.0:GHC.Generics base-4.11.1.0:GHC.IO.Exception
+                         containers-0.5.11.0:Data.IntMap.Internal
+                         containers-0.5.11.0:Data.IntSet.Internal
+                         containers-0.5.11.0:Data.Map.Internal
+                         containers-0.5.11.0:Data.Sequence.Internal
+                         containers-0.5.11.0:Data.Set.Internal
+                         ghc-boot-th-8.4.3:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.4.3:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.6:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.6:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.3.0:Control.Monad.Primitive
+                         primitive-0.6.3.0:Data.Primitive.ByteArray
+                         template-haskell-2.13.0.0:Language.Haskell.TH.Syntax
+import  -/  QuickCheck-2.11.3:Test.QuickCheck 8597fb70e0afba5fb9d4ded03a4b1b62
+import  -/  QuickCheck-2.11.3:Test.QuickCheck.Arbitrary 4df33de46388caa5cd1ba81ee16f6b92
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+6e37a6515ead2c01e8ffde88a9515718
+  $fArbitraryFour ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b,
+     Test.QuickCheck.Arbitrary.Arbitrary c,
+     Test.QuickCheck.Arbitrary.Arbitrary d) =>
+    Test.QuickCheck.Arbitrary.Arbitrary (FunctorExercises.Four a b c d)
+  DFunId
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)><L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      @ c
+                      @ d
+                      (v :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                      (v1 :: Test.QuickCheck.Arbitrary.Arbitrary b)
+                      (v2 :: Test.QuickCheck.Arbitrary.Arbitrary c)
+                      (v3 :: Test.QuickCheck.Arbitrary.Arbitrary d).
+                  @ (FunctorExercises.Four a b c d)
+                  (FunctorExercises.$fArbitraryFour1 @ a @ b @ c @ d v v1 v2 v3)
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                            <FunctorExercises.Four a b c d>_R))
+                  (\ (ds :: FunctorExercises.Four a b c d) ->
+                   GHC.Types.[] @ (FunctorExercises.Four a b c d)) -}
+d2609a81da7864d32283f4b25f2ac2de
+  $fArbitraryFour' ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b) =>
+    Test.QuickCheck.Arbitrary.Arbitrary (FunctorExercises.Four' a b)
+  DFunId
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>m, Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      (v :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                      (v1 :: Test.QuickCheck.Arbitrary.Arbitrary b).
+                  @ (FunctorExercises.Four' a b)
+                  (FunctorExercises.$fArbitraryFour'1 @ a @ b v v1)
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.N:Gen[0] <FunctorExercises.Four' a b>_R))
+                  (\ (ds :: FunctorExercises.Four' a b) ->
+                   GHC.Types.[] @ (FunctorExercises.Four' a b)) -}
+d2609a81da7864d32283f4b25f2ac2de
+  $fArbitraryFour'1 ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b) =>
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> FunctorExercises.Four' a b
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>m,
+     Inline: [0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ b
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Arbitrary.Arbitrary b)
+                   (w2 :: Test.QuickCheck.Random.QCGen)
+                   (w3 :: GHC.Types.Int) ->
+                 case w2
+                        `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 case FunctorExercises.$w$carbitrary1
+                        @ a
+                        @ b
+                        w
+                        w1
+                        ww1
+                        ww2
+                        ww3
+                        ww4
+                        w3 of ww7 { (#,,,#) ww8 ww9 ww10 ww11 ->
+                 FunctorExercises.Four' @ a @ b ww8 ww9 ww10 ww11 } }) -}
+6e37a6515ead2c01e8ffde88a9515718
+  $fArbitraryFour1 ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b,
+     Test.QuickCheck.Arbitrary.Arbitrary c,
+     Test.QuickCheck.Arbitrary.Arbitrary d) =>
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> FunctorExercises.Four a b c d
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>m,
+     Inline: [0],
+     Unfolding: InlineRule (6, True, False)
+                (\ @ a
+                   @ b
+                   @ c
+                   @ d
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Arbitrary.Arbitrary b)
+                   (w2 :: Test.QuickCheck.Arbitrary.Arbitrary c)
+                   (w3 :: Test.QuickCheck.Arbitrary.Arbitrary d)
+                   (w4 :: Test.QuickCheck.Random.QCGen)
+                   (w5 :: GHC.Types.Int) ->
+                 case w4
+                        `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 case FunctorExercises.$w$carbitrary
+                        @ a
+                        @ b
+                        @ c
+                        @ d
+                        w
+                        w1
+                        w2
+                        w3
+                        ww1
+                        ww2
+                        ww3
+                        ww4
+                        w5 of ww7 { (#,,,#) ww8 ww9 ww10 ww11 ->
+                 FunctorExercises.Four @ a @ b @ c @ d ww8 ww9 ww10 ww11 } }) -}
+9897602409ae0f086ffc8a2b69ec230d
+  $fArbitraryIdentity ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    Test.QuickCheck.Arbitrary.Arbitrary (FunctorExercises.Identity a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: Test.QuickCheck.Arbitrary.Arbitrary a).
+                  @ (FunctorExercises.Identity a)
+                  (FunctorExercises.$fArbitraryIdentity1 @ a v)
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                            <FunctorExercises.Identity a>_R))
+                  (\ (ds :: FunctorExercises.Identity a) ->
+                   GHC.Types.[] @ (FunctorExercises.Identity a)) -}
+9897602409ae0f086ffc8a2b69ec230d
+  $fArbitraryIdentity1 ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> FunctorExercises.Identity a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Random.QCGen)
+                   (w2 :: GHC.Types.Int) ->
+                 case w1
+                        `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 FunctorExercises.$w$carbitrary2 @ a w ww1 ww2 ww3 ww4 w2 }) -}
+970321f3ed5ae3d340d6cff338a0c9b8
+  $fArbitraryPair ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    Test.QuickCheck.Arbitrary.Arbitrary (FunctorExercises.Pair a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: Test.QuickCheck.Arbitrary.Arbitrary a).
+                  @ (FunctorExercises.Pair a)
+                  (FunctorExercises.$fArbitraryPair1 @ a v)
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.N:Gen[0] <FunctorExercises.Pair a>_R))
+                  (\ (ds :: FunctorExercises.Pair a) ->
+                   GHC.Types.[] @ (FunctorExercises.Pair a)) -}
+970321f3ed5ae3d340d6cff338a0c9b8
+  $fArbitraryPair1 ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> FunctorExercises.Pair a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>m,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Random.QCGen)
+                   (w2 :: GHC.Types.Int) ->
+                 case w1
+                        `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 case FunctorExercises.$w$carbitrary3
+                        @ a
+                        w
+                        ww1
+                        ww2
+                        ww3
+                        ww4
+                        w2 of ww7 { (#,#) ww8 ww9 ->
+                 FunctorExercises.Pair @ a ww8 ww9 } }) -}
+252ba9515a188888cd5cfbe97e4f8584
+  $fArbitraryThree ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b,
+     Test.QuickCheck.Arbitrary.Arbitrary c) =>
+    Test.QuickCheck.Arbitrary.Arbitrary (FunctorExercises.Three a b c)
+  DFunId
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      @ c
+                      (v :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                      (v1 :: Test.QuickCheck.Arbitrary.Arbitrary b)
+                      (v2 :: Test.QuickCheck.Arbitrary.Arbitrary c).
+                  @ (FunctorExercises.Three a b c)
+                  (FunctorExercises.$fArbitraryThree1 @ a @ b @ c v v1 v2)
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                            <FunctorExercises.Three a b c>_R))
+                  (\ (ds :: FunctorExercises.Three a b c) ->
+                   GHC.Types.[] @ (FunctorExercises.Three a b c)) -}
+afa7eb9d635953ef37969d32dcd815f0
+  $fArbitraryThree' ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b) =>
+    Test.QuickCheck.Arbitrary.Arbitrary (FunctorExercises.Three' a b)
+  DFunId
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>m, Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      (v :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                      (v1 :: Test.QuickCheck.Arbitrary.Arbitrary b).
+                  @ (FunctorExercises.Three' a b)
+                  (FunctorExercises.$fArbitraryThree'1 @ a @ b v v1)
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                            <FunctorExercises.Three' a b>_R))
+                  (\ (ds :: FunctorExercises.Three' a b) ->
+                   GHC.Types.[] @ (FunctorExercises.Three' a b)) -}
+afa7eb9d635953ef37969d32dcd815f0
+  $fArbitraryThree'1 ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b) =>
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> FunctorExercises.Three' a b
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><L,U(C(C1(U)),A)><S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>m,
+     Inline: [0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ b
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Arbitrary.Arbitrary b)
+                   (w2 :: Test.QuickCheck.Random.QCGen)
+                   (w3 :: GHC.Types.Int) ->
+                 case w2
+                        `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 case FunctorExercises.$w$carbitrary5
+                        @ a
+                        @ b
+                        w
+                        w1
+                        ww1
+                        ww2
+                        ww3
+                        ww4
+                        w3 of ww7 { (#,,#) ww8 ww9 ww10 ->
+                 FunctorExercises.Three' @ a @ b ww8 ww9 ww10 } }) -}
+252ba9515a188888cd5cfbe97e4f8584
+  $fArbitraryThree1 ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b,
+     Test.QuickCheck.Arbitrary.Arbitrary c) =>
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> FunctorExercises.Three a b c
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>m,
+     Inline: [0],
+     Unfolding: InlineRule (5, True, False)
+                (\ @ a
+                   @ b
+                   @ c
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Arbitrary.Arbitrary b)
+                   (w2 :: Test.QuickCheck.Arbitrary.Arbitrary c)
+                   (w3 :: Test.QuickCheck.Random.QCGen)
+                   (w4 :: GHC.Types.Int) ->
+                 case w3
+                        `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 case FunctorExercises.$w$carbitrary4
+                        @ a
+                        @ b
+                        @ c
+                        w
+                        w1
+                        w2
+                        ww1
+                        ww2
+                        ww3
+                        ww4
+                        w4 of ww7 { (#,,#) ww8 ww9 ww10 ->
+                 FunctorExercises.Three @ a @ b @ c ww8 ww9 ww10 } }) -}
+925cd16d980854a2b7cd9451456cffd8
+  $fArbitraryTwo ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b) =>
+    Test.QuickCheck.Arbitrary.Arbitrary (FunctorExercises.Two a b)
+  DFunId
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>m, Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      (v :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                      (v1 :: Test.QuickCheck.Arbitrary.Arbitrary b).
+                  @ (FunctorExercises.Two a b)
+                  (FunctorExercises.$fArbitraryTwo1 @ a @ b v v1)
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.N:Gen[0] <FunctorExercises.Two a b>_R))
+                  (\ (ds :: FunctorExercises.Two a b) ->
+                   GHC.Types.[] @ (FunctorExercises.Two a b)) -}
+925cd16d980854a2b7cd9451456cffd8
+  $fArbitraryTwo1 ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b) =>
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> FunctorExercises.Two a b
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>m,
+     Inline: [0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ b
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Arbitrary.Arbitrary b)
+                   (w2 :: Test.QuickCheck.Random.QCGen)
+                   (w3 :: GHC.Types.Int) ->
+                 case w2
+                        `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 case FunctorExercises.$w$carbitrary6
+                        @ a
+                        @ b
+                        w
+                        w1
+                        ww1
+                        ww2
+                        ww3
+                        ww4
+                        w3 of ww7 { (#,#) ww8 ww9 ->
+                 FunctorExercises.Two @ a @ b ww8 ww9 } }) -}
+6e37a6515ead2c01e8ffde88a9515718
+  $fEqFour ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b, GHC.Classes.Eq c,
+     GHC.Classes.Eq d) =>
+    GHC.Classes.Eq (FunctorExercises.Four a b c d)
+  DFunId
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)><L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      @ c
+                      @ d
+                      (v :: GHC.Classes.Eq a)
+                      (v1 :: GHC.Classes.Eq b)
+                      (v2 :: GHC.Classes.Eq c)
+                      (v3 :: GHC.Classes.Eq d).
+                  @ (FunctorExercises.Four a b c d)
+                  (FunctorExercises.$fEqFour_$c== @ a @ b @ c @ d v v1 v2 v3)
+                  (FunctorExercises.$fEqFour_$c/= @ a @ b @ c @ d v v1 v2 v3) -}
+d2609a81da7864d32283f4b25f2ac2de
+  $fEqFour' ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b) =>
+    GHC.Classes.Eq (FunctorExercises.Four' a b)
+  DFunId
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>m, Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      (v :: GHC.Classes.Eq a)
+                      (v1 :: GHC.Classes.Eq b).
+                  @ (FunctorExercises.Four' a b)
+                  (FunctorExercises.$fEqFour'_$c== @ a @ b v v1)
+                  (FunctorExercises.$fEqFour'_$c/= @ a @ b v v1) -}
+d2609a81da7864d32283f4b25f2ac2de
+  $fEqFour'_$c/= ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b) =>
+    FunctorExercises.Four' a b
+    -> FunctorExercises.Four' a b -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,1*U(U,U,U,U)><S,1*U(U,U,U,U)>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (4, False, False)
+                (\ @ a
+                   @ b
+                   ($dEq :: GHC.Classes.Eq a)
+                   ($dEq1 :: GHC.Classes.Eq b)
+                   (x :: FunctorExercises.Four' a b)
+                   (y :: FunctorExercises.Four' a b) ->
+                 case FunctorExercises.$fEqFour'_$c==
+                        @ a
+                        @ b
+                        $dEq
+                        $dEq1
+                        x
+                        y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+d2609a81da7864d32283f4b25f2ac2de
+  $fEqFour'_$c== ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b) =>
+    FunctorExercises.Four' a b
+    -> FunctorExercises.Four' a b -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,1*U(U,U,U,U)><S,1*U(U,U,U,U)>,
+     Inline: [0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ b
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Classes.Eq b)
+                   (w2 :: FunctorExercises.Four' a b)
+                   (w3 :: FunctorExercises.Four' a b) ->
+                 case w2 of ww { FunctorExercises.Four' ww1 ww2 ww3 ww4 ->
+                 case w3 of ww5 { FunctorExercises.Four' ww6 ww7 ww8 ww9 ->
+                 FunctorExercises.$w$c==
+                   @ a
+                   @ b
+                   w
+                   w1
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww6
+                   ww7
+                   ww8
+                   ww9 } }) -}
+6e37a6515ead2c01e8ffde88a9515718
+  $fEqFour_$c/= ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b, GHC.Classes.Eq c,
+     GHC.Classes.Eq d) =>
+    FunctorExercises.Four a b c d
+    -> FunctorExercises.Four a b c d -> GHC.Types.Bool
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,1*U(U,U,U,U)><S,1*U(U,U,U,U)>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (6, False, False)
+                (\ @ a
+                   @ b
+                   @ c
+                   @ d
+                   ($dEq :: GHC.Classes.Eq a)
+                   ($dEq1 :: GHC.Classes.Eq b)
+                   ($dEq2 :: GHC.Classes.Eq c)
+                   ($dEq3 :: GHC.Classes.Eq d)
+                   (x :: FunctorExercises.Four a b c d)
+                   (y :: FunctorExercises.Four a b c d) ->
+                 case FunctorExercises.$fEqFour_$c==
+                        @ a
+                        @ b
+                        @ c
+                        @ d
+                        $dEq
+                        $dEq1
+                        $dEq2
+                        $dEq3
+                        x
+                        y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+6e37a6515ead2c01e8ffde88a9515718
+  $fEqFour_$c== ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b, GHC.Classes.Eq c,
+     GHC.Classes.Eq d) =>
+    FunctorExercises.Four a b c d
+    -> FunctorExercises.Four a b c d -> GHC.Types.Bool
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,1*U(U,U,U,U)><S,1*U(U,U,U,U)>,
+     Unfolding: (\ @ a
+                   @ b
+                   @ c
+                   @ d
+                   ($dEq :: GHC.Classes.Eq a)
+                   ($dEq1 :: GHC.Classes.Eq b)
+                   ($dEq2 :: GHC.Classes.Eq c)
+                   ($dEq3 :: GHC.Classes.Eq d)
+                   (ds :: FunctorExercises.Four a b c d)
+                   (ds1 :: FunctorExercises.Four a b c d) ->
+                 case ds of wild { FunctorExercises.Four a1 a2 a3 a4 ->
+                 case ds1 of wild1 { FunctorExercises.Four b1 b2 b3 b4 ->
+                 case GHC.Classes.== @ a $dEq a1 b1 of wild2 {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Classes.== @ b $dEq1 a2 b2 of wild3 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case GHC.Classes.== @ c $dEq2 a3 b3 of wild4 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True -> GHC.Classes.== @ d $dEq3 a4 b4 } } } } }) -}
+9897602409ae0f086ffc8a2b69ec230d
+  $fEqIdentity ::
+    GHC.Classes.Eq a => GHC.Classes.Eq (FunctorExercises.Identity a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(1*U,1*U)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: GHC.Classes.Eq a).
+                  @ (FunctorExercises.Identity a)
+                  (GHC.Classes.== @ a v)
+                    `cast`
+                  (Sym (FunctorExercises.N:Identity[0] <a>_R)
+                   ->_R Sym (FunctorExercises.N:Identity[0] <a>_R)
+                   ->_R <GHC.Types.Bool>_R)
+                  (GHC.Classes./= @ a v)
+                    `cast`
+                  (Sym (FunctorExercises.N:Identity[0] <a>_R)
+                   ->_R Sym (FunctorExercises.N:Identity[0] <a>_R)
+                   ->_R <GHC.Types.Bool>_R) -}
+970321f3ed5ae3d340d6cff338a0c9b8
+  $fEqPair ::
+    GHC.Classes.Eq a => GHC.Classes.Eq (FunctorExercises.Pair a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: GHC.Classes.Eq a).
+                  @ (FunctorExercises.Pair a)
+                  (FunctorExercises.$fEqPair_$c== @ a v)
+                  (FunctorExercises.$fEqPair_$c/= @ a v) -}
+970321f3ed5ae3d340d6cff338a0c9b8
+  $fEqPair_$c/= ::
+    GHC.Classes.Eq a =>
+    FunctorExercises.Pair a
+    -> FunctorExercises.Pair a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><S,1*U(U,U)><S,1*U(U,U)>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (x :: FunctorExercises.Pair a)
+                   (y :: FunctorExercises.Pair a) ->
+                 case FunctorExercises.$fEqPair_$c== @ a $dEq x y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+970321f3ed5ae3d340d6cff338a0c9b8
+  $fEqPair_$c== ::
+    GHC.Classes.Eq a =>
+    FunctorExercises.Pair a
+    -> FunctorExercises.Pair a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><S,1*U(U,U)><S,1*U(U,U)>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: FunctorExercises.Pair a)
+                   (w2 :: FunctorExercises.Pair a) ->
+                 case w1 of ww { FunctorExercises.Pair ww1 ww2 ->
+                 case w2 of ww3 { FunctorExercises.Pair ww4 ww5 ->
+                 FunctorExercises.$w$c==1 @ a w ww1 ww2 ww4 ww5 } }) -}
+252ba9515a188888cd5cfbe97e4f8584
+  $fEqThree ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b, GHC.Classes.Eq c) =>
+    GHC.Classes.Eq (FunctorExercises.Three a b c)
+  DFunId
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      @ c
+                      (v :: GHC.Classes.Eq a)
+                      (v1 :: GHC.Classes.Eq b)
+                      (v2 :: GHC.Classes.Eq c).
+                  @ (FunctorExercises.Three a b c)
+                  (FunctorExercises.$fEqThree_$c== @ a @ b @ c v v1 v2)
+                  (FunctorExercises.$fEqThree_$c/= @ a @ b @ c v v1 v2) -}
+afa7eb9d635953ef37969d32dcd815f0
+  $fEqThree' ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b) =>
+    GHC.Classes.Eq (FunctorExercises.Three' a b)
+  DFunId
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>m, Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      (v :: GHC.Classes.Eq a)
+                      (v1 :: GHC.Classes.Eq b).
+                  @ (FunctorExercises.Three' a b)
+                  (FunctorExercises.$fEqThree'_$c== @ a @ b v v1)
+                  (FunctorExercises.$fEqThree'_$c/= @ a @ b v v1) -}
+afa7eb9d635953ef37969d32dcd815f0
+  $fEqThree'_$c/= ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b) =>
+    FunctorExercises.Three' a b
+    -> FunctorExercises.Three' a b -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,U(C(C1(U)),A)><S,1*U(U,U,U)><S,1*U(U,U,U)>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (4, False, False)
+                (\ @ a
+                   @ b
+                   ($dEq :: GHC.Classes.Eq a)
+                   ($dEq1 :: GHC.Classes.Eq b)
+                   (x :: FunctorExercises.Three' a b)
+                   (y :: FunctorExercises.Three' a b) ->
+                 case FunctorExercises.$fEqThree'_$c==
+                        @ a
+                        @ b
+                        $dEq
+                        $dEq1
+                        x
+                        y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+afa7eb9d635953ef37969d32dcd815f0
+  $fEqThree'_$c== ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b) =>
+    FunctorExercises.Three' a b
+    -> FunctorExercises.Three' a b -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,U(C(C1(U)),A)><S,1*U(U,U,U)><S,1*U(U,U,U)>,
+     Inline: [0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ b
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Classes.Eq b)
+                   (w2 :: FunctorExercises.Three' a b)
+                   (w3 :: FunctorExercises.Three' a b) ->
+                 case w2 of ww { FunctorExercises.Three' ww1 ww2 ww3 ->
+                 case w3 of ww4 { FunctorExercises.Three' ww5 ww6 ww7 ->
+                 FunctorExercises.$w$c==3
+                   @ a
+                   @ b
+                   w
+                   w1
+                   ww1
+                   ww2
+                   ww3
+                   ww5
+                   ww6
+                   ww7 } }) -}
+252ba9515a188888cd5cfbe97e4f8584
+  $fEqThree_$c/= ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b, GHC.Classes.Eq c) =>
+    FunctorExercises.Three a b c
+    -> FunctorExercises.Three a b c -> GHC.Types.Bool
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,1*U(U,U,U)><S,1*U(U,U,U)>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (5, False, False)
+                (\ @ a
+                   @ b
+                   @ c
+                   ($dEq :: GHC.Classes.Eq a)
+                   ($dEq1 :: GHC.Classes.Eq b)
+                   ($dEq2 :: GHC.Classes.Eq c)
+                   (x :: FunctorExercises.Three a b c)
+                   (y :: FunctorExercises.Three a b c) ->
+                 case FunctorExercises.$fEqThree_$c==
+                        @ a
+                        @ b
+                        @ c
+                        $dEq
+                        $dEq1
+                        $dEq2
+                        x
+                        y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+252ba9515a188888cd5cfbe97e4f8584
+  $fEqThree_$c== ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b, GHC.Classes.Eq c) =>
+    FunctorExercises.Three a b c
+    -> FunctorExercises.Three a b c -> GHC.Types.Bool
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,1*U(U,U,U)><S,1*U(U,U,U)>,
+     Inline: [0],
+     Unfolding: InlineRule (5, True, False)
+                (\ @ a
+                   @ b
+                   @ c
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Classes.Eq b)
+                   (w2 :: GHC.Classes.Eq c)
+                   (w3 :: FunctorExercises.Three a b c)
+                   (w4 :: FunctorExercises.Three a b c) ->
+                 case w3 of ww { FunctorExercises.Three ww1 ww2 ww3 ->
+                 case w4 of ww4 { FunctorExercises.Three ww5 ww6 ww7 ->
+                 FunctorExercises.$w$c==2
+                   @ a
+                   @ b
+                   @ c
+                   w
+                   w1
+                   w2
+                   ww1
+                   ww2
+                   ww3
+                   ww5
+                   ww6
+                   ww7 } }) -}
+925cd16d980854a2b7cd9451456cffd8
+  $fEqTwo ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b) =>
+    GHC.Classes.Eq (FunctorExercises.Two a b)
+  DFunId
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>m, Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      (v :: GHC.Classes.Eq a)
+                      (v1 :: GHC.Classes.Eq b).
+                  @ (FunctorExercises.Two a b)
+                  (FunctorExercises.$fEqTwo_$c== @ a @ b v v1)
+                  (FunctorExercises.$fEqTwo_$c/= @ a @ b v v1) -}
+925cd16d980854a2b7cd9451456cffd8
+  $fEqTwo_$c/= ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b) =>
+    FunctorExercises.Two a b
+    -> FunctorExercises.Two a b -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,1*U(U,U)><S,1*U(U,U)>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (4, False, False)
+                (\ @ a
+                   @ b
+                   ($dEq :: GHC.Classes.Eq a)
+                   ($dEq1 :: GHC.Classes.Eq b)
+                   (x :: FunctorExercises.Two a b)
+                   (y :: FunctorExercises.Two a b) ->
+                 case x of wild { FunctorExercises.Two a1 a2 ->
+                 case y of wild1 { FunctorExercises.Two b1 b2 ->
+                 case GHC.Classes.== @ a $dEq a1 b1 of wild2 {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True
+                   -> case GHC.Classes.== @ b $dEq1 a2 b2 of wild3 {
+                        GHC.Types.False -> GHC.Types.True
+                        GHC.Types.True -> GHC.Types.False } } } }) -}
+925cd16d980854a2b7cd9451456cffd8
+  $fEqTwo_$c== ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b) =>
+    FunctorExercises.Two a b
+    -> FunctorExercises.Two a b -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,1*U(U,U)><S,1*U(U,U)>,
+     Inline: [0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ b
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Classes.Eq b)
+                   (w2 :: FunctorExercises.Two a b)
+                   (w3 :: FunctorExercises.Two a b) ->
+                 case w2 of ww { FunctorExercises.Two ww1 ww2 ->
+                 case w3 of ww3 { FunctorExercises.Two ww4 ww5 ->
+                 FunctorExercises.$w$c==4 @ a @ b w w1 ww1 ww2 ww4 ww5 } }) -}
+6e37a6515ead2c01e8ffde88a9515718
+  $fFunctorFour :: GHC.Base.Functor (FunctorExercises.Four a b c)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun: @ a @ b @ c.
+                  @ (FunctorExercises.Four a b c)
+                  (FunctorExercises.$fFunctorFour_$cfmap @ a @ b @ c)
+                  (FunctorExercises.$fFunctorFour_$c<$ @ a @ b @ c) -}
+d2609a81da7864d32283f4b25f2ac2de
+  $fFunctorFour' :: GHC.Base.Functor (FunctorExercises.Four' a)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun: @ a.
+                  @ (FunctorExercises.Four' a)
+                  (FunctorExercises.$fFunctorFour'_$cfmap @ a)
+                  (FunctorExercises.$fFunctorFour'_$c<$ @ a) -}
+d2609a81da7864d32283f4b25f2ac2de
+  $fFunctorFour'_$c<$ ::
+    a2 -> FunctorExercises.Four' a1 b -> FunctorExercises.Four' a1 a2
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U(U,U,U,A)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ a1 @ b (x :: a1) (ds :: FunctorExercises.Four' a b) ->
+                 case ds of wild { FunctorExercises.Four' a2 b1 c d ->
+                 FunctorExercises.Four' @ a @ a1 a2 b1 c x }) -}
+d2609a81da7864d32283f4b25f2ac2de
+  $fFunctorFour'_$cfmap ::
+    (a2 -> b)
+    -> FunctorExercises.Four' a1 a2 -> FunctorExercises.Four' a1 b
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,1*C1(U)><S,1*U(U,U,U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ a1
+                   @ b
+                   (f :: a1 -> b)
+                   (ds :: FunctorExercises.Four' a a1) ->
+                 case ds of wild { FunctorExercises.Four' a2 b1 c d ->
+                 FunctorExercises.Four' @ a @ b a2 b1 c (f d) }) -}
+6e37a6515ead2c01e8ffde88a9515718
+  $fFunctorFour_$c<$ ::
+    a2
+    -> FunctorExercises.Four a1 b1 c b2
+    -> FunctorExercises.Four a1 b1 c a2
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U(U,U,U,A)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ b
+                   @ c
+                   @ a1
+                   @ b1
+                   (x :: a1)
+                   (ds :: FunctorExercises.Four a b c b1) ->
+                 case ds of wild { FunctorExercises.Four a2 b2 c1 d ->
+                 FunctorExercises.Four @ a @ b @ c @ a1 a2 b2 c1 x }) -}
+6e37a6515ead2c01e8ffde88a9515718
+  $fFunctorFour_$cfmap ::
+    (a2 -> b2)
+    -> FunctorExercises.Four a1 b1 c a2
+    -> FunctorExercises.Four a1 b1 c b2
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,1*C1(U)><S,1*U(U,U,U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ b
+                   @ c
+                   @ a1
+                   @ b1
+                   (f :: a1 -> b1)
+                   (ds :: FunctorExercises.Four a b c a1) ->
+                 case ds of wild { FunctorExercises.Four a2 b2 c1 d ->
+                 FunctorExercises.Four @ a @ b @ c @ b1 a2 b2 c1 (f d) }) -}
+9897602409ae0f086ffc8a2b69ec230d
+  $fFunctorIdentity :: GHC.Base.Functor FunctorExercises.Identity
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ FunctorExercises.Identity
+                  FunctorExercises.$fFunctorIdentity2
+                    `cast`
+                  (forall (a :: <*>_N) (b :: <*>_N).
+                   <a -> b>_R
+                   ->_R <FunctorExercises.Identity a>_R
+                   ->_R Sym (FunctorExercises.N:Identity[0] <b>_R))
+                  (\ @ a @ b -> FunctorExercises.$fFunctorIdentity1 @ b @ a)
+                    `cast`
+                  (forall (a :: <*>_N) (b :: <*>_N).
+                   <a>_R
+                   ->_R <FunctorExercises.Identity b>_R
+                   ->_R Sym (FunctorExercises.N:Identity[0] <a>_R)) -}
+9897602409ae0f086ffc8a2b69ec230d
+  $fFunctorIdentity1 :: a -> FunctorExercises.Identity b -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ b @ a (x :: a) (ds :: FunctorExercises.Identity b) -> x) -}
+9897602409ae0f086ffc8a2b69ec230d
+  $fFunctorIdentity2 :: (a -> b) -> FunctorExercises.Identity a -> b
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a @ b (f :: a -> b) (ds :: FunctorExercises.Identity a) ->
+                 f ds `cast` (FunctorExercises.N:Identity[0] <a>_R)) -}
+970321f3ed5ae3d340d6cff338a0c9b8
+  $fFunctorPair :: GHC.Base.Functor FunctorExercises.Pair
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ FunctorExercises.Pair
+                  FunctorExercises.$fFunctorPair_$cfmap
+                  FunctorExercises.$fFunctorPair_$c<$ -}
+970321f3ed5ae3d340d6cff338a0c9b8
+  $fFunctorPair_$c<$ ::
+    a -> FunctorExercises.Pair b -> FunctorExercises.Pair a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*H>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ b (x :: a) (eta :: FunctorExercises.Pair b) ->
+                 case eta of wild { FunctorExercises.Pair a1 b1 ->
+                 FunctorExercises.Pair @ a x x }) -}
+970321f3ed5ae3d340d6cff338a0c9b8
+  $fFunctorPair_$cfmap ::
+    (a -> b) -> FunctorExercises.Pair a -> FunctorExercises.Pair b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U(U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ b (f :: a -> b) (ds :: FunctorExercises.Pair a) ->
+                 case ds of wild { FunctorExercises.Pair a1 b1 ->
+                 FunctorExercises.Pair @ b (f a1) (f b1) }) -}
+252ba9515a188888cd5cfbe97e4f8584
+  $fFunctorThree :: GHC.Base.Functor (FunctorExercises.Three a b)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun: @ a @ b.
+                  @ (FunctorExercises.Three a b)
+                  (FunctorExercises.$fFunctorThree_$cfmap @ a @ b)
+                  (FunctorExercises.$fFunctorThree_$c<$ @ a @ b) -}
+afa7eb9d635953ef37969d32dcd815f0
+  $fFunctorThree' :: GHC.Base.Functor (FunctorExercises.Three' a)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun: @ a.
+                  @ (FunctorExercises.Three' a)
+                  (FunctorExercises.$fFunctorThree'_$cfmap @ a)
+                  (FunctorExercises.$fFunctorThree'_$c<$ @ a) -}
+afa7eb9d635953ef37969d32dcd815f0
+  $fFunctorThree'_$c<$ ::
+    a2 -> FunctorExercises.Three' a1 b -> FunctorExercises.Three' a1 a2
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U(U,A,A)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ a1 @ b (x :: a1) (eta :: FunctorExercises.Three' a b) ->
+                 case eta of wild { FunctorExercises.Three' a2 b1 c ->
+                 FunctorExercises.Three' @ a @ a1 a2 x x }) -}
+afa7eb9d635953ef37969d32dcd815f0
+  $fFunctorThree'_$cfmap ::
+    (a2 -> b)
+    -> FunctorExercises.Three' a1 a2 -> FunctorExercises.Three' a1 b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U(U,U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ a1
+                   @ b
+                   (f :: a1 -> b)
+                   (ds :: FunctorExercises.Three' a a1) ->
+                 case ds of wild { FunctorExercises.Three' a2 b1 c ->
+                 FunctorExercises.Three' @ a @ b a2 (f b1) (f c) }) -}
+252ba9515a188888cd5cfbe97e4f8584
+  $fFunctorThree_$c<$ ::
+    a2
+    -> FunctorExercises.Three a1 b1 b2
+    -> FunctorExercises.Three a1 b1 a2
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U(U,U,A)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ b
+                   @ a1
+                   @ b1
+                   (x :: a1)
+                   (ds :: FunctorExercises.Three a b b1) ->
+                 case ds of wild { FunctorExercises.Three a2 b2 c ->
+                 FunctorExercises.Three @ a @ b @ a1 a2 b2 x }) -}
+252ba9515a188888cd5cfbe97e4f8584
+  $fFunctorThree_$cfmap ::
+    (a2 -> b2)
+    -> FunctorExercises.Three a1 b1 a2
+    -> FunctorExercises.Three a1 b1 b2
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*C1(U)><S,1*U(U,U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ b
+                   @ a1
+                   @ b1
+                   (f :: a1 -> b1)
+                   (ds :: FunctorExercises.Three a b a1) ->
+                 case ds of wild { FunctorExercises.Three a2 b2 c ->
+                 FunctorExercises.Three @ a @ b @ b1 a2 b2 (f c) }) -}
+925cd16d980854a2b7cd9451456cffd8
+  $fFunctorTwo :: GHC.Base.Functor (FunctorExercises.Two a)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun: @ a.
+                  @ (FunctorExercises.Two a)
+                  (FunctorExercises.$fFunctorTwo_$cfmap @ a)
+                  (FunctorExercises.$fFunctorTwo_$c<$ @ a) -}
+925cd16d980854a2b7cd9451456cffd8
+  $fFunctorTwo_$c<$ ::
+    a2 -> FunctorExercises.Two a1 b -> FunctorExercises.Two a1 a2
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U(U,A)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ a1 @ b (x :: a1) (ds :: FunctorExercises.Two a b) ->
+                 case ds of wild { FunctorExercises.Two a2 b1 ->
+                 FunctorExercises.Two @ a @ a1 a2 x }) -}
+925cd16d980854a2b7cd9451456cffd8
+  $fFunctorTwo_$cfmap ::
+    (a2 -> b)
+    -> FunctorExercises.Two a1 a2 -> FunctorExercises.Two a1 b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*C1(U)><S,1*U(U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ a1 @ b (f :: a1 -> b) (ds :: FunctorExercises.Two a a1) ->
+                 case ds of wild { FunctorExercises.Two a2 b1 ->
+                 FunctorExercises.Two @ a @ b a2 (f b1) }) -}
+6e37a6515ead2c01e8ffde88a9515718
+  $fShowFour ::
+    (GHC.Show.Show a, GHC.Show.Show b, GHC.Show.Show c,
+     GHC.Show.Show d) =>
+    GHC.Show.Show (FunctorExercises.Four a b c d)
+  DFunId
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      @ c
+                      @ d
+                      (v :: GHC.Show.Show a)
+                      (v1 :: GHC.Show.Show b)
+                      (v2 :: GHC.Show.Show c)
+                      (v3 :: GHC.Show.Show d).
+                  @ (FunctorExercises.Four a b c d)
+                  (FunctorExercises.$fShowFour_$cshowsPrec
+                     @ a
+                     @ b
+                     @ c
+                     @ d
+                     v
+                     v1
+                     v2
+                     v3)
+                  (FunctorExercises.$fShowFour_$cshow @ a @ b @ c @ d v v1 v2 v3)
+                  (FunctorExercises.$fShowFour_$cshowList
+                     @ a
+                     @ b
+                     @ c
+                     @ d
+                     v
+                     v1
+                     v2
+                     v3) -}
+d2609a81da7864d32283f4b25f2ac2de
+  $fShowFour' ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    GHC.Show.Show (FunctorExercises.Four' a b)
+  DFunId
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      (v :: GHC.Show.Show a)
+                      (v1 :: GHC.Show.Show b).
+                  @ (FunctorExercises.Four' a b)
+                  (FunctorExercises.$fShowFour'_$cshowsPrec @ a @ b v v1)
+                  (FunctorExercises.$fShowFour'_$cshow @ a @ b v v1)
+                  (FunctorExercises.$fShowFour'_$cshowList @ a @ b v v1) -}
+3b38a6b050fd0a139dba128cb69ca63f
+  $fShowFour'1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Four' "#) -}
+d2609a81da7864d32283f4b25f2ac2de
+  $fShowFour'_$cshow ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    FunctorExercises.Four' a b -> GHC.Base.String
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><S,1*U(U,U,U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ b
+                   ($dShow :: GHC.Show.Show a)
+                   ($dShow1 :: GHC.Show.Show b)
+                   (x :: FunctorExercises.Four' a b) ->
+                 FunctorExercises.$fShowFour'_$cshowsPrec
+                   @ a
+                   @ b
+                   $dShow
+                   $dShow1
+                   FunctorExercises.$fShowFour1
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+d2609a81da7864d32283f4b25f2ac2de
+  $fShowFour'_$cshowList ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    [FunctorExercises.Four' a b] -> GHC.Show.ShowS
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ b
+                   ($dShow :: GHC.Show.Show a)
+                   ($dShow1 :: GHC.Show.Show b)
+                   (ls :: [FunctorExercises.Four' a b])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (FunctorExercises.Four' a b)
+                   (FunctorExercises.$fShowFour'_$cshowsPrec
+                      @ a
+                      @ b
+                      $dShow
+                      $dShow1
+                      FunctorExercises.$fShowFour1)
+                   ls
+                   s) -}
+d2609a81da7864d32283f4b25f2ac2de
+  $fShowFour'_$cshowsPrec ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    GHC.Types.Int -> FunctorExercises.Four' a b -> GHC.Show.ShowS
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><S(S),1*U(U)><S,1*U(U,U,U,U)>,
+     Inline: [0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ b
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Show.Show b)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: FunctorExercises.Four' a b) ->
+                 case w2 of ww { GHC.Types.I# ww1 ->
+                 case w3 of ww2 { FunctorExercises.Four' ww3 ww4 ww5 ww6 ->
+                 FunctorExercises.$w$cshowsPrec1
+                   @ a
+                   @ b
+                   w
+                   w1
+                   ww1
+                   ww3
+                   ww4
+                   ww5
+                   ww6 } }) -}
+d538650b6fa1c97693862cfe611e8709
+  $fShowFour1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+8845469deb9197f64b8bfea63022907d
+  $fShowFour2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Four "#) -}
+62b67c94bf83de948cbe81bbc107eb2e
+  $fShowFour3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11#) -}
+6e37a6515ead2c01e8ffde88a9515718
+  $fShowFour_$cshow ::
+    (GHC.Show.Show a, GHC.Show.Show b, GHC.Show.Show c,
+     GHC.Show.Show d) =>
+    FunctorExercises.Four a b c d -> GHC.Base.String
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><S,1*U(U,U,U,U)>,
+     Unfolding: InlineRule (5, True, False)
+                (\ @ a
+                   @ b
+                   @ c
+                   @ d
+                   ($dShow :: GHC.Show.Show a)
+                   ($dShow1 :: GHC.Show.Show b)
+                   ($dShow2 :: GHC.Show.Show c)
+                   ($dShow3 :: GHC.Show.Show d)
+                   (x :: FunctorExercises.Four a b c d) ->
+                 FunctorExercises.$fShowFour_$cshowsPrec
+                   @ a
+                   @ b
+                   @ c
+                   @ d
+                   $dShow
+                   $dShow1
+                   $dShow2
+                   $dShow3
+                   FunctorExercises.$fShowFour1
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+6e37a6515ead2c01e8ffde88a9515718
+  $fShowFour_$cshowList ::
+    (GHC.Show.Show a, GHC.Show.Show b, GHC.Show.Show c,
+     GHC.Show.Show d) =>
+    [FunctorExercises.Four a b c d] -> GHC.Show.ShowS
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (6, True, False)
+                (\ @ a
+                   @ b
+                   @ c
+                   @ d
+                   ($dShow :: GHC.Show.Show a)
+                   ($dShow1 :: GHC.Show.Show b)
+                   ($dShow2 :: GHC.Show.Show c)
+                   ($dShow3 :: GHC.Show.Show d)
+                   (ls :: [FunctorExercises.Four a b c d])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (FunctorExercises.Four a b c d)
+                   (FunctorExercises.$fShowFour_$cshowsPrec
+                      @ a
+                      @ b
+                      @ c
+                      @ d
+                      $dShow
+                      $dShow1
+                      $dShow2
+                      $dShow3
+                      FunctorExercises.$fShowFour1)
+                   ls
+                   s) -}
+6e37a6515ead2c01e8ffde88a9515718
+  $fShowFour_$cshowsPrec ::
+    (GHC.Show.Show a, GHC.Show.Show b, GHC.Show.Show c,
+     GHC.Show.Show d) =>
+    GHC.Types.Int -> FunctorExercises.Four a b c d -> GHC.Show.ShowS
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><S(S),1*U(U)><S,1*U(U,U,U,U)>,
+     Inline: [0],
+     Unfolding: InlineRule (6, True, False)
+                (\ @ a
+                   @ b
+                   @ c
+                   @ d
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Show.Show b)
+                   (w2 :: GHC.Show.Show c)
+                   (w3 :: GHC.Show.Show d)
+                   (w4 :: GHC.Types.Int)
+                   (w5 :: FunctorExercises.Four a b c d) ->
+                 case w4 of ww { GHC.Types.I# ww1 ->
+                 case w5 of ww2 { FunctorExercises.Four ww3 ww4 ww5 ww6 ->
+                 FunctorExercises.$w$cshowsPrec
+                   @ a
+                   @ b
+                   @ c
+                   @ d
+                   w
+                   w1
+                   w2
+                   w3
+                   ww1
+                   ww3
+                   ww4
+                   ww5
+                   ww6 } }) -}
+9897602409ae0f086ffc8a2b69ec230d
+  $fShowIdentity ::
+    GHC.Show.Show a => GHC.Show.Show (FunctorExercises.Identity a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(C(U))),A,A)>m, Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: GHC.Show.Show a).
+                  @ (FunctorExercises.Identity a)
+                  (FunctorExercises.$fShowIdentity_$cshowsPrec @ a v)
+                  (FunctorExercises.$fShowIdentity_$cshow @ a v)
+                  (FunctorExercises.$fShowIdentity_$cshowList @ a v) -}
+8883795c2d2210ee2c36be50cedce10d
+  $fShowIdentity1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   FunctorExercises.$fShowIdentity2) -}
+0d15cd243fc2cbdb0d44e2fd905882a4
+  $fShowIdentity2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Identity "#) -}
+9897602409ae0f086ffc8a2b69ec230d
+  $fShowIdentity_$cshow ::
+    GHC.Show.Show a => FunctorExercises.Identity a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U(1*C1(C1(C1(U))),A,A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (x :: FunctorExercises.Identity a) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      FunctorExercises.$fShowIdentity1)
+                   (GHC.Show.showsPrec
+                      @ a
+                      $dShow
+                      FunctorExercises.$fShowFour3
+                      x `cast` (FunctorExercises.N:Identity[0] <a>_R)
+                      (GHC.Types.[] @ GHC.Types.Char))) -}
+9897602409ae0f086ffc8a2b69ec230d
+  $fShowIdentity_$cshowList ::
+    GHC.Show.Show a => [FunctorExercises.Identity a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(C(U))),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (ls :: [FunctorExercises.Identity a])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (FunctorExercises.Identity a)
+                   (FunctorExercises.$fShowIdentity_$cshowsPrec
+                      @ a
+                      $dShow
+                      FunctorExercises.$fShowFour1)
+                   ls
+                   s) -}
+9897602409ae0f086ffc8a2b69ec230d
+  $fShowIdentity_$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Types.Int -> FunctorExercises.Identity a -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><S(S),1*U(U)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: FunctorExercises.Identity a) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 FunctorExercises.$w$cshowsPrec2 @ a w ww1 w2 }) -}
+970321f3ed5ae3d340d6cff338a0c9b8
+  $fShowPair ::
+    GHC.Show.Show a => GHC.Show.Show (FunctorExercises.Pair a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(C(U))),A,A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: GHC.Show.Show a).
+                  @ (FunctorExercises.Pair a)
+                  (FunctorExercises.$fShowPair_$cshowsPrec @ a v)
+                  (FunctorExercises.$fShowPair_$cshow @ a v)
+                  (FunctorExercises.$fShowPair_$cshowList @ a v) -}
+d0451b684434d928983967aa9c3728ab
+  $fShowPair1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Pair "#) -}
+970321f3ed5ae3d340d6cff338a0c9b8
+  $fShowPair_$cshow ::
+    GHC.Show.Show a => FunctorExercises.Pair a -> GHC.Base.String
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><S,1*U(U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (x :: FunctorExercises.Pair a) ->
+                 FunctorExercises.$fShowPair_$cshowsPrec
+                   @ a
+                   $dShow
+                   FunctorExercises.$fShowFour1
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+970321f3ed5ae3d340d6cff338a0c9b8
+  $fShowPair_$cshowList ::
+    GHC.Show.Show a => [FunctorExercises.Pair a] -> GHC.Show.ShowS
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (ls :: [FunctorExercises.Pair a])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (FunctorExercises.Pair a)
+                   (FunctorExercises.$fShowPair_$cshowsPrec
+                      @ a
+                      $dShow
+                      FunctorExercises.$fShowFour1)
+                   ls
+                   s) -}
+970321f3ed5ae3d340d6cff338a0c9b8
+  $fShowPair_$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Types.Int -> FunctorExercises.Pair a -> GHC.Show.ShowS
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><S(S),1*U(U)><S,1*U(U,U)>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: FunctorExercises.Pair a) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case w2 of ww2 { FunctorExercises.Pair ww3 ww4 ->
+                 FunctorExercises.$w$cshowsPrec3 @ a w ww1 ww3 ww4 } }) -}
+252ba9515a188888cd5cfbe97e4f8584
+  $fShowThree ::
+    (GHC.Show.Show a, GHC.Show.Show b, GHC.Show.Show c) =>
+    GHC.Show.Show (FunctorExercises.Three a b c)
+  DFunId
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      @ c
+                      (v :: GHC.Show.Show a)
+                      (v1 :: GHC.Show.Show b)
+                      (v2 :: GHC.Show.Show c).
+                  @ (FunctorExercises.Three a b c)
+                  (FunctorExercises.$fShowThree_$cshowsPrec @ a @ b @ c v v1 v2)
+                  (FunctorExercises.$fShowThree_$cshow @ a @ b @ c v v1 v2)
+                  (FunctorExercises.$fShowThree_$cshowList @ a @ b @ c v v1 v2) -}
+afa7eb9d635953ef37969d32dcd815f0
+  $fShowThree' ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    GHC.Show.Show (FunctorExercises.Three' a b)
+  DFunId
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      (v :: GHC.Show.Show a)
+                      (v1 :: GHC.Show.Show b).
+                  @ (FunctorExercises.Three' a b)
+                  (FunctorExercises.$fShowThree'_$cshowsPrec @ a @ b v v1)
+                  (FunctorExercises.$fShowThree'_$cshow @ a @ b v v1)
+                  (FunctorExercises.$fShowThree'_$cshowList @ a @ b v v1) -}
+1335fc28bd6e4b917796ca9ee8f8c78a
+  $fShowThree'1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Three' "#) -}
+afa7eb9d635953ef37969d32dcd815f0
+  $fShowThree'_$cshow ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    FunctorExercises.Three' a b -> GHC.Base.String
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)><S,1*U(U,U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ b
+                   ($dShow :: GHC.Show.Show a)
+                   ($dShow1 :: GHC.Show.Show b)
+                   (x :: FunctorExercises.Three' a b) ->
+                 FunctorExercises.$fShowThree'_$cshowsPrec
+                   @ a
+                   @ b
+                   $dShow
+                   $dShow1
+                   FunctorExercises.$fShowFour1
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+afa7eb9d635953ef37969d32dcd815f0
+  $fShowThree'_$cshowList ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    [FunctorExercises.Three' a b] -> GHC.Show.ShowS
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ b
+                   ($dShow :: GHC.Show.Show a)
+                   ($dShow1 :: GHC.Show.Show b)
+                   (ls :: [FunctorExercises.Three' a b])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (FunctorExercises.Three' a b)
+                   (FunctorExercises.$fShowThree'_$cshowsPrec
+                      @ a
+                      @ b
+                      $dShow
+                      $dShow1
+                      FunctorExercises.$fShowFour1)
+                   ls
+                   s) -}
+afa7eb9d635953ef37969d32dcd815f0
+  $fShowThree'_$cshowsPrec ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    GHC.Types.Int -> FunctorExercises.Three' a b -> GHC.Show.ShowS
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)><S(S),1*U(U)><S,1*U(U,U,U)>,
+     Inline: [0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ b
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Show.Show b)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: FunctorExercises.Three' a b) ->
+                 case w2 of ww { GHC.Types.I# ww1 ->
+                 case w3 of ww2 { FunctorExercises.Three' ww3 ww4 ww5 ->
+                 FunctorExercises.$w$cshowsPrec5
+                   @ a
+                   @ b
+                   w
+                   w1
+                   ww1
+                   ww3
+                   ww4
+                   ww5 } }) -}
+39248712093b95ca704aaa9881d09982
+  $fShowThree1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Three "#) -}
+252ba9515a188888cd5cfbe97e4f8584
+  $fShowThree_$cshow ::
+    (GHC.Show.Show a, GHC.Show.Show b, GHC.Show.Show c) =>
+    FunctorExercises.Three a b c -> GHC.Base.String
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><S,1*U(U,U,U)>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ b
+                   @ c
+                   ($dShow :: GHC.Show.Show a)
+                   ($dShow1 :: GHC.Show.Show b)
+                   ($dShow2 :: GHC.Show.Show c)
+                   (x :: FunctorExercises.Three a b c) ->
+                 FunctorExercises.$fShowThree_$cshowsPrec
+                   @ a
+                   @ b
+                   @ c
+                   $dShow
+                   $dShow1
+                   $dShow2
+                   FunctorExercises.$fShowFour1
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+252ba9515a188888cd5cfbe97e4f8584
+  $fShowThree_$cshowList ::
+    (GHC.Show.Show a, GHC.Show.Show b, GHC.Show.Show c) =>
+    [FunctorExercises.Three a b c] -> GHC.Show.ShowS
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (5, True, False)
+                (\ @ a
+                   @ b
+                   @ c
+                   ($dShow :: GHC.Show.Show a)
+                   ($dShow1 :: GHC.Show.Show b)
+                   ($dShow2 :: GHC.Show.Show c)
+                   (ls :: [FunctorExercises.Three a b c])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (FunctorExercises.Three a b c)
+                   (FunctorExercises.$fShowThree_$cshowsPrec
+                      @ a
+                      @ b
+                      @ c
+                      $dShow
+                      $dShow1
+                      $dShow2
+                      FunctorExercises.$fShowFour1)
+                   ls
+                   s) -}
+252ba9515a188888cd5cfbe97e4f8584
+  $fShowThree_$cshowsPrec ::
+    (GHC.Show.Show a, GHC.Show.Show b, GHC.Show.Show c) =>
+    GHC.Types.Int -> FunctorExercises.Three a b c -> GHC.Show.ShowS
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><S(S),1*U(U)><S,1*U(U,U,U)>,
+     Inline: [0],
+     Unfolding: InlineRule (5, True, False)
+                (\ @ a
+                   @ b
+                   @ c
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Show.Show b)
+                   (w2 :: GHC.Show.Show c)
+                   (w3 :: GHC.Types.Int)
+                   (w4 :: FunctorExercises.Three a b c) ->
+                 case w3 of ww { GHC.Types.I# ww1 ->
+                 case w4 of ww2 { FunctorExercises.Three ww3 ww4 ww5 ->
+                 FunctorExercises.$w$cshowsPrec4
+                   @ a
+                   @ b
+                   @ c
+                   w
+                   w1
+                   w2
+                   ww1
+                   ww3
+                   ww4
+                   ww5 } }) -}
+925cd16d980854a2b7cd9451456cffd8
+  $fShowTwo ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    GHC.Show.Show (FunctorExercises.Two a b)
+  DFunId
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      (v :: GHC.Show.Show a)
+                      (v1 :: GHC.Show.Show b).
+                  @ (FunctorExercises.Two a b)
+                  (FunctorExercises.$fShowTwo_$cshowsPrec @ a @ b v v1)
+                  (FunctorExercises.$fShowTwo_$cshow @ a @ b v v1)
+                  (FunctorExercises.$fShowTwo_$cshowList @ a @ b v v1) -}
+2ee8c8cab0f86dc7de1a448e6c178f02
+  $fShowTwo1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Two "#) -}
+925cd16d980854a2b7cd9451456cffd8
+  $fShowTwo_$cshow ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    FunctorExercises.Two a b -> GHC.Base.String
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><S,1*U(U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ b
+                   ($dShow :: GHC.Show.Show a)
+                   ($dShow1 :: GHC.Show.Show b)
+                   (x :: FunctorExercises.Two a b) ->
+                 FunctorExercises.$fShowTwo_$cshowsPrec
+                   @ a
+                   @ b
+                   $dShow
+                   $dShow1
+                   FunctorExercises.$fShowFour1
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+925cd16d980854a2b7cd9451456cffd8
+  $fShowTwo_$cshowList ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    [FunctorExercises.Two a b] -> GHC.Show.ShowS
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ b
+                   ($dShow :: GHC.Show.Show a)
+                   ($dShow1 :: GHC.Show.Show b)
+                   (ls :: [FunctorExercises.Two a b])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (FunctorExercises.Two a b)
+                   (FunctorExercises.$fShowTwo_$cshowsPrec
+                      @ a
+                      @ b
+                      $dShow
+                      $dShow1
+                      FunctorExercises.$fShowFour1)
+                   ls
+                   s) -}
+925cd16d980854a2b7cd9451456cffd8
+  $fShowTwo_$cshowsPrec ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    GHC.Types.Int -> FunctorExercises.Two a b -> GHC.Show.ShowS
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><S(S),1*U(U)><S,1*U(U,U)>,
+     Inline: [0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ b
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Show.Show b)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: FunctorExercises.Two a b) ->
+                 case w2 of ww { GHC.Types.I# ww1 ->
+                 case w3 of ww2 { FunctorExercises.Two ww3 ww4 ->
+                 FunctorExercises.$w$cshowsPrec6 @ a @ b w w1 ww1 ww3 ww4 } }) -}
+8ae879f0c0714d58e39d4ad5116bcbe2
+  $tc'Four :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4926122378719084087##
+                   1444581277665731374##
+                   FunctorExercises.$trModule
+                   FunctorExercises.$tc'Four2
+                   4#
+                   FunctorExercises.$tc'Four1) -}
+0342c5df26215ff866a442008bd71575
+  $tc'Four' :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11664790083367778506##
+                   14381964423496041348##
+                   FunctorExercises.$trModule
+                   FunctorExercises.$tc'Four'2
+                   2#
+                   FunctorExercises.$tc'Four'1) -}
+9e230543c76cac88bf02e62bb173dfd2
+  $tc'Four'1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+73173de5503d464dbe572c3e52fc846e
+  $tc'Four'2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS FunctorExercises.$tc'Four'3) -}
+3002a5ab3e600a29d5ffc955ce0dae30
+  $tc'Four'3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Four'"#) -}
+de7e5194d0b56ec5ed34561b13bfd52e
+  $tc'Four1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+c7621e1be7ca425fd4172e7c54fb6355
+  $tc'Four2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS FunctorExercises.$tc'Four3) -}
+df378b106da586c1b6c4e175fa37e62a
+  $tc'Four3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Four"#) -}
+65ea48475b3076b1feb28342032562da
+  $tc'Identity :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15859598097015737394##
+                   10326753355582650566##
+                   FunctorExercises.$trModule
+                   FunctorExercises.$tc'Identity2
+                   1#
+                   FunctorExercises.$tc'Identity1) -}
+9d6b91b56457821d4c0c6bb77d45b2c0
+  $tc'Identity1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+b1aea8eaf4e3119408db177e16038bfc
+  $tc'Identity2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS FunctorExercises.$tc'Identity3) -}
+8d0e2559ad294dac3f038b4662cb74f0
+  $tc'Identity3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Identity"#) -}
+a398b211c81bd429226eb0e25fd4ee92
+  $tc'Pair :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2580191611004430527##
+                   6561618380174093312##
+                   FunctorExercises.$trModule
+                   FunctorExercises.$tc'Pair2
+                   1#
+                   FunctorExercises.$tc'Pair1) -}
+45fd166c61b46c0bdbddbea0c6e2476d
+  $tc'Pair1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+6b5b0b4573abe249f6ec618fe7d74464
+  $tc'Pair2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS FunctorExercises.$tc'Pair3) -}
+02f7a8645150e12ea9b274bee55cf857
+  $tc'Pair3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Pair"#) -}
+292497f977ae4f203572aa3c7d564042
+  $tc'Three :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17560805647070321593##
+                   11065695050302157545##
+                   FunctorExercises.$trModule
+                   FunctorExercises.$tc'Three2
+                   3#
+                   FunctorExercises.$tc'Three1) -}
+9941635d9343fb3462a3d6b33521da5a
+  $tc'Three' :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   696513820354440181##
+                   15900061136931265190##
+                   FunctorExercises.$trModule
+                   FunctorExercises.$tc'Three'2
+                   2#
+                   FunctorExercises.$tc'Three'1) -}
+2e05f72bc0124c46fb9b0180a8d81bba
+  $tc'Three'1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+e7ff439d4eb40faaaab6b6e0118e5d20
+  $tc'Three'2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS FunctorExercises.$tc'Three'3) -}
+b898b1d8b5cbd7a23d91cda9986fe196
+  $tc'Three'3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Three'"#) -}
+008322125ab4545537c9d1f8574e233d
+  $tc'Three1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+8a93d4122f693d3a2698d91725d77ae7
+  $tc'Three2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS FunctorExercises.$tc'Three3) -}
+3623325e658058ddf17c6adb5c3c43ce
+  $tc'Three3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Three"#) -}
+89cb9291d13d0d96a592044b49ab3826
+  $tc'Two :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3520343080069029579##
+                   1263522200939822480##
+                   FunctorExercises.$trModule
+                   FunctorExercises.$tc'Two2
+                   2#
+                   FunctorExercises.$tc'Two1) -}
+d625b967a94d9d47afa1e10b646a7f71
+  $tc'Two1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+9f9fb74d45841579f48b899150bc51b3
+  $tc'Two2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS FunctorExercises.$tc'Two3) -}
+f30193391b3a22573584b7f925fee86c
+  $tc'Two3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Two"#) -}
+1acaf1abc224176fc620bb705194c67b
+  $tcFour :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17711496394129213505##
+                   13077261294933704155##
+                   FunctorExercises.$trModule
+                   FunctorExercises.$tcFour2
+                   0#
+                   FunctorExercises.$tcFour1) -}
+a1d796596c65c4d2e35b472308c62e3e
+  $tcFour' :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8482671419782251271##
+                   2008186286124687306##
+                   FunctorExercises.$trModule
+                   FunctorExercises.$tcFour'1
+                   0#
+                   GHC.Types.krep$*->*->*) -}
+58c7302b2bc1ff16b928b7ae4b867266
+  $tcFour'1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS FunctorExercises.$tcFour'2) -}
+420201dd7b472c9d886e64c8e68514b3
+  $tcFour'2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Four'"#) -}
+74705883c54d9514c7541aac93977952
+  $tcFour1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+411f7d740142c4b5afc7135072c196f3
+  $tcFour2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS FunctorExercises.$tcFour3) -}
+cf67633627e99ef786a57b913e328936
+  $tcFour3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Four"#) -}
+c5beaa08e5d2f1d6dc9335f574ae5d2d
+  $tcIdentity :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15565391189270180886##
+                   8842773588370142790##
+                   FunctorExercises.$trModule
+                   FunctorExercises.$tcIdentity1
+                   0#
+                   GHC.Types.krep$*Arr*) -}
+558c029b099db4c138743dd0be620cfc
+  $tcIdentity1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS FunctorExercises.$tcIdentity2) -}
+d84ad4abd044733f872ce9b249711b7d
+  $tcIdentity2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Identity"#) -}
+84df58500376c111578359eb02e04b61
+  $tcPair :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3151979644248588025##
+                   14696623349090323469##
+                   FunctorExercises.$trModule
+                   FunctorExercises.$tcPair1
+                   0#
+                   GHC.Types.krep$*Arr*) -}
+de11309489054ebab02ffdf56a80fce5
+  $tcPair1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS FunctorExercises.$tcPair2) -}
+09803e7316e6d3fbcd6154e0bed0dff6
+  $tcPair2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Pair"#) -}
+6eef5c16e022624872fd139a1a4e7ec7
+  $tcThree :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8100919071554031663##
+                   18078248221602115184##
+                   FunctorExercises.$trModule
+                   FunctorExercises.$tcThree2
+                   0#
+                   FunctorExercises.$tcThree1) -}
+2d268b574344eaf84ffdb4b83a43e8f0
+  $tcThree' :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13932124880099114671##
+                   17480227537543099196##
+                   FunctorExercises.$trModule
+                   FunctorExercises.$tcThree'1
+                   0#
+                   GHC.Types.krep$*->*->*) -}
+272b3e40362b400b93d565f60119b8bd
+  $tcThree'1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS FunctorExercises.$tcThree'2) -}
+382cc2aa6debfa4babc23fb054de4c0a
+  $tcThree'2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Three'"#) -}
+65317518c7d9225d06e6412bb1a4e8b5
+  $tcThree1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+f2e3ca1e3ca08bbd9fae04a41e09b637
+  $tcThree2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS FunctorExercises.$tcThree3) -}
+0203ea5601ae197051d5bc8286d3fd64
+  $tcThree3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Three"#) -}
+ec04d44679edeae99128827c3433b40c
+  $tcTwo :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3111251806114436226##
+                   7023966453338816090##
+                   FunctorExercises.$trModule
+                   FunctorExercises.$tcTwo1
+                   0#
+                   GHC.Types.krep$*->*->*) -}
+a569c4c5457ff8ec9141b7a3e435aa9f
+  $tcTwo1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS FunctorExercises.$tcTwo2) -}
+f2129a502702c2f600a3a0c6a8832c53
+  $tcTwo2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Two"#) -}
+53573ba7a30229afa5f012bf68af9db9
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   FunctorExercises.$trModule3
+                   FunctorExercises.$trModule1) -}
+71b156c85cd380a9ef78f5b5e9dc3785
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS FunctorExercises.$trModule2) -}
+f05152eb80b98a6ea476b99bfb30411e
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("FunctorExercises"#) -}
+d128bdeeb936899ea6865cc957727864
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS FunctorExercises.$trModule4) -}
+0e70bfc74ffd2b60606e41c54d31dd5a
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("chapter16-0.1.0.0-5XgB7WzA3TFGiEioj7RtiQ"#) -}
+a60e4220fc0d4445cffede6a92df8f04
+  $w$c== ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b) =>
+    a -> a -> a -> b -> a -> a -> a -> b -> GHC.Types.Bool
+  {- Arity: 10, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Classes.Eq b)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: b)
+                   (ww4 :: a)
+                   (ww5 :: a)
+                   (ww6 :: a)
+                   (ww7 :: b) ->
+                 case GHC.Classes.== @ a w ww ww4 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Classes.== @ a w ww1 ww5 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case GHC.Classes.== @ a w ww2 ww6 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True -> GHC.Classes.== @ b w1 ww3 ww7 } } }) -}
+96f1866309bf5ce83b632deb7105a181
+  $w$c==1 :: GHC.Classes.Eq a => a -> a -> a -> a -> GHC.Types.Bool
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a) ->
+                 case GHC.Classes.== @ a w ww ww2 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> GHC.Classes.== @ a w ww1 ww3 }) -}
+321fbf7f8dc878847229cda0daf21932
+  $w$c==2 ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b, GHC.Classes.Eq c) =>
+    a -> b -> c -> a -> b -> c -> GHC.Types.Bool
+  {- Arity: 9, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   @ c
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Classes.Eq b)
+                   (w2 :: GHC.Classes.Eq c)
+                   (ww :: a)
+                   (ww1 :: b)
+                   (ww2 :: c)
+                   (ww3 :: a)
+                   (ww4 :: b)
+                   (ww5 :: c) ->
+                 case GHC.Classes.== @ a w ww ww3 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Classes.== @ b w1 ww1 ww4 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True -> GHC.Classes.== @ c w2 ww2 ww5 } }) -}
+373d8242c6e7062d63840cee52503577
+  $w$c==3 ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b) =>
+    a -> b -> b -> a -> b -> b -> GHC.Types.Bool
+  {- Arity: 8, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,U(C(C1(U)),A)><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Classes.Eq b)
+                   (ww :: a)
+                   (ww1 :: b)
+                   (ww2 :: b)
+                   (ww3 :: a)
+                   (ww4 :: b)
+                   (ww5 :: b) ->
+                 case GHC.Classes.== @ a w ww ww3 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Classes.== @ b w1 ww1 ww4 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True -> GHC.Classes.== @ b w1 ww2 ww5 } }) -}
+a37104600d042624adef2461e56a514e
+  $w$c==4 ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b) =>
+    a -> b -> a -> b -> GHC.Types.Bool
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Classes.Eq b)
+                   (ww :: a)
+                   (ww1 :: b)
+                   (ww2 :: a)
+                   (ww3 :: b) ->
+                 case GHC.Classes.== @ a w ww ww2 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> GHC.Classes.== @ b w1 ww1 ww3 }) -}
+05c9d64d1e0629e65534af3f72debc13
+  $w$carbitrary ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b,
+     Test.QuickCheck.Arbitrary.Arbitrary c,
+     Test.QuickCheck.Arbitrary.Arbitrary d) =>
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> (# a, b, c, d #)
+  {- Arity: 9, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,U><S,U><S,U><S,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   @ c
+                   @ d
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Arbitrary.Arbitrary b)
+                   (w2 :: Test.QuickCheck.Arbitrary.Arbitrary c)
+                   (w3 :: Test.QuickCheck.Arbitrary.Arbitrary d)
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w4 :: GHC.Types.Int) ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww
+                        ww1
+                        ww2
+                        ww3 of ww7 { (#,#) ww8 ww9 ->
+                 case ww9 of ww4 { System.Random.TF.Gen.TFGen ww5 ww6 ww10 ww11 ww12 ww13 ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww5
+                        ww6
+                        ww10
+                        ww11 of ww14 { (#,#) ww15 ww16 ->
+                 case ww16 of ww17 { System.Random.TF.Gen.TFGen ww18 ww19 ww20 ww21 ww22 ww23 ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww18
+                        ww19
+                        ww20
+                        ww21 of ww24 { (#,#) ww25 ww26 ->
+                 case ww26 of ww27 { System.Random.TF.Gen.TFGen ww28 ww29 ww30 ww31 ww32 ww33 ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww28
+                        ww29
+                        ww30
+                        ww31 of ww34 { (#,#) ww35 ww36 ->
+                 (# (Test.QuickCheck.Arbitrary.arbitrary @ a w)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <a>_R)
+                      ww8 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w4,
+                    (Test.QuickCheck.Arbitrary.arbitrary @ b w1)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <b>_R)
+                      ww15 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w4,
+                    (Test.QuickCheck.Arbitrary.arbitrary @ c w2)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <c>_R)
+                      ww25 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w4,
+                    (Test.QuickCheck.Arbitrary.arbitrary @ d w3)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <d>_R)
+                      ww35 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w4 #) } } } } } } }) -}
+1bb1ac09eb8d7c8f5cb36bd784b99f88
+  $w$carbitrary1 ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b) =>
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> (# a, a, a, b #)
+  {- Arity: 7, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,U><S,U><S,U><S,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Arbitrary.Arbitrary b)
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w2 :: GHC.Types.Int) ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww
+                        ww1
+                        ww2
+                        ww3 of ww7 { (#,#) ww8 ww9 ->
+                 case ww9 of ww4 { System.Random.TF.Gen.TFGen ww5 ww6 ww10 ww11 ww12 ww13 ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww5
+                        ww6
+                        ww10
+                        ww11 of ww14 { (#,#) ww15 ww16 ->
+                 case ww16 of ww17 { System.Random.TF.Gen.TFGen ww18 ww19 ww20 ww21 ww22 ww23 ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww18
+                        ww19
+                        ww20
+                        ww21 of ww24 { (#,#) ww25 ww26 ->
+                 case ww26 of ww27 { System.Random.TF.Gen.TFGen ww28 ww29 ww30 ww31 ww32 ww33 ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww28
+                        ww29
+                        ww30
+                        ww31 of ww34 { (#,#) ww35 ww36 ->
+                 (# (Test.QuickCheck.Arbitrary.arbitrary @ a w)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <a>_R)
+                      ww8 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w2,
+                    (Test.QuickCheck.Arbitrary.arbitrary @ a w)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <a>_R)
+                      ww15 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w2,
+                    (Test.QuickCheck.Arbitrary.arbitrary @ a w)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <a>_R)
+                      ww25 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w2,
+                    (Test.QuickCheck.Arbitrary.arbitrary @ b w1)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <b>_R)
+                      ww35 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w2 #) } } } } } } }) -}
+9897602409ae0f086ffc8a2b69ec230d
+  $w$carbitrary2 ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> FunctorExercises.Identity a
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><S,U><S,U><S,U><S,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w1 :: GHC.Types.Int) ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww
+                        ww1
+                        ww2
+                        ww3 of ww7 { (#,#) ww8 ww9 ->
+                 ((Test.QuickCheck.Arbitrary.arbitrary @ a w)
+                    `cast`
+                  (Test.QuickCheck.Gen.N:Gen[0] <a>_R)
+                    ww8 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                    w1)
+                   `cast`
+                 (Sym (FunctorExercises.N:Identity[0] <a>_R)) }) -}
+7a49e1c5b1624d84e498f74769a74b28
+  $w$carbitrary3 ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> (# a, a #)
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,U><S,U><S,U><S,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w1 :: GHC.Types.Int) ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww
+                        ww1
+                        ww2
+                        ww3 of ww7 { (#,#) ww8 ww9 ->
+                 case ww9 of ww4 { System.Random.TF.Gen.TFGen ww5 ww6 ww10 ww11 ww12 ww13 ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww5
+                        ww6
+                        ww10
+                        ww11 of ww14 { (#,#) ww15 ww16 ->
+                 (# (Test.QuickCheck.Arbitrary.arbitrary @ a w)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <a>_R)
+                      ww8 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w1,
+                    (Test.QuickCheck.Arbitrary.arbitrary @ a w)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <a>_R)
+                      ww15 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w1 #) } } }) -}
+51c893e0c985f454f249f1d0ade55e08
+  $w$carbitrary4 ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b,
+     Test.QuickCheck.Arbitrary.Arbitrary c) =>
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> (# a, b, c #)
+  {- Arity: 8, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,U><S,U><S,U><S,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   @ c
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Arbitrary.Arbitrary b)
+                   (w2 :: Test.QuickCheck.Arbitrary.Arbitrary c)
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w3 :: GHC.Types.Int) ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww
+                        ww1
+                        ww2
+                        ww3 of ww7 { (#,#) ww8 ww9 ->
+                 case ww9 of ww4 { System.Random.TF.Gen.TFGen ww5 ww6 ww10 ww11 ww12 ww13 ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww5
+                        ww6
+                        ww10
+                        ww11 of ww14 { (#,#) ww15 ww16 ->
+                 case ww16 of ww17 { System.Random.TF.Gen.TFGen ww18 ww19 ww20 ww21 ww22 ww23 ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww18
+                        ww19
+                        ww20
+                        ww21 of ww24 { (#,#) ww25 ww26 ->
+                 (# (Test.QuickCheck.Arbitrary.arbitrary @ a w)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <a>_R)
+                      ww8 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w3,
+                    (Test.QuickCheck.Arbitrary.arbitrary @ b w1)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <b>_R)
+                      ww15 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w3,
+                    (Test.QuickCheck.Arbitrary.arbitrary @ c w2)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <c>_R)
+                      ww25 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w3 #) } } } } }) -}
+6de06a2289284e98bfc72ccbf154bf01
+  $w$carbitrary5 ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b) =>
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> (# a, b, b #)
+  {- Arity: 7, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><L,U(C(C1(U)),A)><S,U><S,U><S,U><S,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Arbitrary.Arbitrary b)
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w2 :: GHC.Types.Int) ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww
+                        ww1
+                        ww2
+                        ww3 of ww7 { (#,#) ww8 ww9 ->
+                 case ww9 of ww4 { System.Random.TF.Gen.TFGen ww5 ww6 ww10 ww11 ww12 ww13 ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww5
+                        ww6
+                        ww10
+                        ww11 of ww14 { (#,#) ww15 ww16 ->
+                 case ww16 of ww17 { System.Random.TF.Gen.TFGen ww18 ww19 ww20 ww21 ww22 ww23 ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww18
+                        ww19
+                        ww20
+                        ww21 of ww24 { (#,#) ww25 ww26 ->
+                 (# (Test.QuickCheck.Arbitrary.arbitrary @ a w)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <a>_R)
+                      ww8 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w2,
+                    (Test.QuickCheck.Arbitrary.arbitrary @ b w1)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <b>_R)
+                      ww15 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w2,
+                    (Test.QuickCheck.Arbitrary.arbitrary @ b w1)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <b>_R)
+                      ww25 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w2 #) } } } } }) -}
+2d4ffca08821976ba7b647e4201a8b4e
+  $w$carbitrary6 ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b) =>
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> (# a, b #)
+  {- Arity: 7, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,U><S,U><S,U><S,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Arbitrary.Arbitrary b)
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w2 :: GHC.Types.Int) ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww
+                        ww1
+                        ww2
+                        ww3 of ww7 { (#,#) ww8 ww9 ->
+                 case ww9 of ww4 { System.Random.TF.Gen.TFGen ww5 ww6 ww10 ww11 ww12 ww13 ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww5
+                        ww6
+                        ww10
+                        ww11 of ww14 { (#,#) ww15 ww16 ->
+                 (# (Test.QuickCheck.Arbitrary.arbitrary @ a w)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <a>_R)
+                      ww8 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w2,
+                    (Test.QuickCheck.Arbitrary.arbitrary @ b w1)
+                      `cast`
+                    (Test.QuickCheck.Gen.N:Gen[0] <b>_R)
+                      ww15 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                      w2 #) } } }) -}
+20533994a0e4376964d83b48c9f6c6a4
+  $w$cshowsPrec ::
+    (GHC.Show.Show a, GHC.Show.Show b, GHC.Show.Show c,
+     GHC.Show.Show d) =>
+    GHC.Prim.Int# -> a -> b -> c -> d -> GHC.Show.ShowS
+  {- Arity: 9, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><S,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   @ c
+                   @ d
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Show.Show b)
+                   (w2 :: GHC.Show.Show c)
+                   (w3 :: GHC.Show.Show d)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: a)
+                   (ww2 :: b)
+                   (ww3 :: c)
+                   (ww4 :: d) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w FunctorExercises.$fShowFour3 ww1
+                 } in
+                 let {
+                   f1 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ b w1 FunctorExercises.$fShowFour3 ww2
+                 } in
+                 let {
+                   f2 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ c w2 FunctorExercises.$fShowFour3 ww3
+                 } in
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ d w3 FunctorExercises.$fShowFour3 ww4
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String) ->
+                     GHC.CString.unpackAppendCString#
+                       FunctorExercises.$fShowFour2
+                       (f (GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.showSpace1
+                             (f1
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.showSpace1
+                                   (f2 (GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 (g x)))))))
+                 } in
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT -> p
+                   1#
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 x)) }) -}
+dfaebfda60cfc9876b05f6e3162bd3f4
+  $w$cshowsPrec1 ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    GHC.Prim.Int# -> a -> a -> a -> b -> GHC.Show.ShowS
+  {- Arity: 7, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><S,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Show.Show b)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a)
+                   (ww4 :: b) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w FunctorExercises.$fShowFour3 ww1
+                 } in
+                 let {
+                   f1 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w FunctorExercises.$fShowFour3 ww2
+                 } in
+                 let {
+                   f2 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w FunctorExercises.$fShowFour3 ww3
+                 } in
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ b w1 FunctorExercises.$fShowFour3 ww4
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String) ->
+                     GHC.CString.unpackAppendCString#
+                       FunctorExercises.$fShowFour'1
+                       (f (GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.showSpace1
+                             (f1
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.showSpace1
+                                   (f2 (GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 (g x)))))))
+                 } in
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT -> p
+                   1#
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 x)) }) -}
+9897602409ae0f086ffc8a2b69ec230d
+  $w$cshowsPrec2 ::
+    GHC.Show.Show a =>
+    GHC.Prim.Int# -> FunctorExercises.Identity a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><S,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (ww :: GHC.Prim.Int#)
+                   (w1 :: FunctorExercises.Identity a) ->
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec
+                       @ a
+                       w
+                       FunctorExercises.$fShowFour3
+                       w1 `cast` (FunctorExercises.N:Identity[0] <a>_R)
+                 } in
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Base.++ @ GHC.Types.Char FunctorExercises.$fShowIdentity1 (g x)
+                   1#
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           FunctorExercises.$fShowIdentity1
+                           (g (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 x))) }) -}
+ee3290c4ed8c75a99cddd935cae3a261
+  $w$cshowsPrec3 ::
+    GHC.Show.Show a => GHC.Prim.Int# -> a -> a -> GHC.Show.ShowS
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(C(U))),A,A)><S,U><L,U><L,U>, Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: a)
+                   (ww2 :: a) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w FunctorExercises.$fShowFour3 ww1
+                 } in
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w FunctorExercises.$fShowFour3 ww2
+                 } in
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.CString.unpackAppendCString#
+                        FunctorExercises.$fShowPair1
+                        (f (GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 (g x)))
+                   1#
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.CString.unpackAppendCString#
+                           FunctorExercises.$fShowPair1
+                           (f (GHC.Types.:
+                                 @ GHC.Types.Char
+                                 GHC.Show.showSpace1
+                                 (g (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 x))))) }) -}
+a1f55a4ee2e25e0fa3bb07cc21e6d953
+  $w$cshowsPrec4 ::
+    (GHC.Show.Show a, GHC.Show.Show b, GHC.Show.Show c) =>
+    GHC.Prim.Int# -> a -> b -> c -> GHC.Show.ShowS
+  {- Arity: 7, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><S,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   @ c
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Show.Show b)
+                   (w2 :: GHC.Show.Show c)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: a)
+                   (ww2 :: b)
+                   (ww3 :: c) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w FunctorExercises.$fShowFour3 ww1
+                 } in
+                 let {
+                   f1 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ b w1 FunctorExercises.$fShowFour3 ww2
+                 } in
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ c w2 FunctorExercises.$fShowFour3 ww3
+                 } in
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.CString.unpackAppendCString#
+                        FunctorExercises.$fShowThree1
+                        (f (GHC.Types.:
+                              @ GHC.Types.Char
+                              GHC.Show.showSpace1
+                              (f1 (GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 (g x)))))
+                   1#
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.CString.unpackAppendCString#
+                           FunctorExercises.$fShowThree1
+                           (f (GHC.Types.:
+                                 @ GHC.Types.Char
+                                 GHC.Show.showSpace1
+                                 (f1
+                                    (GHC.Types.:
+                                       @ GHC.Types.Char
+                                       GHC.Show.showSpace1
+                                       (g (GHC.Types.:
+                                             @ GHC.Types.Char
+                                             GHC.Show.$fShow(,)2
+                                             x))))))) }) -}
+71d1633ade46cbb64e944f99d75c8f85
+  $w$cshowsPrec5 ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    GHC.Prim.Int# -> a -> b -> b -> GHC.Show.ShowS
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)><S,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Show.Show b)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: a)
+                   (ww2 :: b)
+                   (ww3 :: b) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w FunctorExercises.$fShowFour3 ww1
+                 } in
+                 let {
+                   f1 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ b w1 FunctorExercises.$fShowFour3 ww2
+                 } in
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ b w1 FunctorExercises.$fShowFour3 ww3
+                 } in
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.CString.unpackAppendCString#
+                        FunctorExercises.$fShowThree'1
+                        (f (GHC.Types.:
+                              @ GHC.Types.Char
+                              GHC.Show.showSpace1
+                              (f1 (GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 (g x)))))
+                   1#
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.CString.unpackAppendCString#
+                           FunctorExercises.$fShowThree'1
+                           (f (GHC.Types.:
+                                 @ GHC.Types.Char
+                                 GHC.Show.showSpace1
+                                 (f1
+                                    (GHC.Types.:
+                                       @ GHC.Types.Char
+                                       GHC.Show.showSpace1
+                                       (g (GHC.Types.:
+                                             @ GHC.Types.Char
+                                             GHC.Show.$fShow(,)2
+                                             x))))))) }) -}
+3094a9059b0cb5151567e3af98ffbfca
+  $w$cshowsPrec6 ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    GHC.Prim.Int# -> a -> b -> GHC.Show.ShowS
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><S,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Show.Show b)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: a)
+                   (ww2 :: b) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w FunctorExercises.$fShowFour3 ww1
+                 } in
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ b w1 FunctorExercises.$fShowFour3 ww2
+                 } in
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.CString.unpackAppendCString#
+                        FunctorExercises.$fShowTwo1
+                        (f (GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 (g x)))
+                   1#
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.CString.unpackAppendCString#
+                           FunctorExercises.$fShowTwo1
+                           (f (GHC.Types.:
+                                 @ GHC.Types.Char
+                                 GHC.Show.showSpace1
+                                 (g (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 x))))) }) -}
+6e37a6515ead2c01e8ffde88a9515718
+  data Four a b c d = Four a b c d
+d2609a81da7864d32283f4b25f2ac2de
+  data Four' a b = Four' a a a b
+9897602409ae0f086ffc8a2b69ec230d
+  newtype Identity a = Identity a
+970321f3ed5ae3d340d6cff338a0c9b8
+  data Pair a = Pair a a
+252ba9515a188888cd5cfbe97e4f8584
+  data Three a b c = Three a b c
+afa7eb9d635953ef37969d32dcd815f0
+  data Three' a b = Three' a b b
+925cd16d980854a2b7cd9451456cffd8
+  data Two a b = Two a b
+instance [safe] Test.QuickCheck.Arbitrary.Arbitrary [FunctorExercises.Four]
+  = FunctorExercises.$fArbitraryFour
+instance [safe] Test.QuickCheck.Arbitrary.Arbitrary [FunctorExercises.Four']
+  = FunctorExercises.$fArbitraryFour'
+instance [safe] Test.QuickCheck.Arbitrary.Arbitrary [FunctorExercises.Identity]
+  = FunctorExercises.$fArbitraryIdentity
+instance [safe] Test.QuickCheck.Arbitrary.Arbitrary [FunctorExercises.Pair]
+  = FunctorExercises.$fArbitraryPair
+instance [safe] Test.QuickCheck.Arbitrary.Arbitrary [FunctorExercises.Three]
+  = FunctorExercises.$fArbitraryThree
+instance [safe] Test.QuickCheck.Arbitrary.Arbitrary [FunctorExercises.Three']
+  = FunctorExercises.$fArbitraryThree'
+instance [safe] Test.QuickCheck.Arbitrary.Arbitrary [FunctorExercises.Two]
+  = FunctorExercises.$fArbitraryTwo
+instance [safe] GHC.Classes.Eq [FunctorExercises.Four]
+  = FunctorExercises.$fEqFour
+instance [safe] GHC.Classes.Eq [FunctorExercises.Four']
+  = FunctorExercises.$fEqFour'
+instance [safe] GHC.Classes.Eq [FunctorExercises.Identity]
+  = FunctorExercises.$fEqIdentity
+instance [safe] GHC.Classes.Eq [FunctorExercises.Pair]
+  = FunctorExercises.$fEqPair
+instance [safe] GHC.Classes.Eq [FunctorExercises.Three]
+  = FunctorExercises.$fEqThree
+instance [safe] GHC.Classes.Eq [FunctorExercises.Three']
+  = FunctorExercises.$fEqThree'
+instance [safe] GHC.Classes.Eq [FunctorExercises.Two]
+  = FunctorExercises.$fEqTwo
+instance [safe] GHC.Base.Functor [FunctorExercises.Four]
+  = FunctorExercises.$fFunctorFour
+instance [safe] GHC.Base.Functor [FunctorExercises.Four']
+  = FunctorExercises.$fFunctorFour'
+instance [safe] GHC.Base.Functor [FunctorExercises.Identity]
+  = FunctorExercises.$fFunctorIdentity
+instance [safe] GHC.Base.Functor [FunctorExercises.Pair]
+  = FunctorExercises.$fFunctorPair
+instance [safe] GHC.Base.Functor [FunctorExercises.Three]
+  = FunctorExercises.$fFunctorThree
+instance [safe] GHC.Base.Functor [FunctorExercises.Three']
+  = FunctorExercises.$fFunctorThree'
+instance [safe] GHC.Base.Functor [FunctorExercises.Two]
+  = FunctorExercises.$fFunctorTwo
+instance [safe] GHC.Show.Show [FunctorExercises.Four]
+  = FunctorExercises.$fShowFour
+instance [safe] GHC.Show.Show [FunctorExercises.Four']
+  = FunctorExercises.$fShowFour'
+instance [safe] GHC.Show.Show [FunctorExercises.Identity]
+  = FunctorExercises.$fShowIdentity
+instance [safe] GHC.Show.Show [FunctorExercises.Pair]
+  = FunctorExercises.$fShowPair
+instance [safe] GHC.Show.Show [FunctorExercises.Three]
+  = FunctorExercises.$fShowThree
+instance [safe] GHC.Show.Show [FunctorExercises.Three']
+  = FunctorExercises.$fShowThree'
+instance [safe] GHC.Show.Show [FunctorExercises.Two]
+  = FunctorExercises.$fShowTwo
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

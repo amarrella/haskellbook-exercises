@@ -1,0 +1,104 @@
+
+==================== FINAL INTERFACE ====================
+2018-09-08 12:34:35.241641 UTC
+
+interface main:Laws 8043
+  interface hash: e4db4357e23a7203036e8c95c4feebef
+  ABI hash: 4c86ee1fa5b4672efa8d6a968383ca8b
+  export-list hash: ea474cc38d2b2f8cdc0d395d1f2a3796
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 934c3a12e40cba55e42ab1ea071a1162
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Laws.functorCompose
+  Laws.functorIdentity
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+2cc92132e628946a99ced1f54ffcdced
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Laws.$trModule3 Laws.$trModule1) -}
+3aef3eb699dbb8d788ce6814b471b8fa
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Laws.$trModule2) -}
+42f629b223164889a9d1d22d9edb6c74
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Laws"#) -}
+2ea0581da2ed5624c5b7acbb4f004429
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Laws.$trModule4) -}
+5e11dc72c32bc586aefaf982227e42e5
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+68ff26ec90cc31e5cb9c83c31fd16bd1
+  functorCompose ::
+    (GHC.Classes.Eq (f c), GHC.Base.Functor f) =>
+    (a -> b) -> (b -> c) -> f a -> GHC.Types.Bool
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,U(C(C1(U)),A)><L,U><L,U><L,U>,
+     Unfolding: (\ @ f :: * -> *
+                   @ c
+                   @ a
+                   @ b
+                   ($dEq :: GHC.Classes.Eq (f c))
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (f1 :: a -> b)
+                   (g :: b -> c)
+                   (x :: f a) ->
+                 GHC.Classes.==
+                   @ (f c)
+                   $dEq
+                   (GHC.Base.fmap
+                      @ f
+                      $dFunctor
+                      @ b
+                      @ c
+                      g
+                      (GHC.Base.fmap @ f $dFunctor @ a @ b f1 x))
+                   (GHC.Base.fmap
+                      @ f
+                      $dFunctor
+                      @ a
+                      @ c
+                      (\ (x1 :: a) -> g (f1 x1))
+                      x)) -}
+352faab14f2fb57bac88cf2cb07dd7e0
+  functorIdentity ::
+    (GHC.Base.Functor f, GHC.Classes.Eq (f a)) => f a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ f :: * -> *
+                   @ a
+                   ($dFunctor :: GHC.Base.Functor f)
+                   ($dEq :: GHC.Classes.Eq (f a))
+                   (f1 :: f a) ->
+                 GHC.Classes.==
+                   @ (f a)
+                   $dEq
+                   (GHC.Base.fmap @ f $dFunctor @ a @ a (GHC.Base.id @ a) f1)
+                   f1) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
