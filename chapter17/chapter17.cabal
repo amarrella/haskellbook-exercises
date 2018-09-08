@@ -1,0 +1,37 @@
+name:                chapter17
+version:             0.1.0.0
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable ch17list
+  main-is: List.hs
+  ghc-options:  -main-is List
+  hs-source-dirs:
+      .
+  build-depends:
+      base >=4.7 && <5
+    , QuickCheck
+    , checkers
+  default-language: Haskell2010
+
+executable ch17validation
+  main-is: Validation.hs
+  ghc-options:  -main-is Validation
+  hs-source-dirs:
+      .
+  build-depends:
+      base >=4.7 && <5
+    , QuickCheck
+    , checkers
+  default-language: Haskell2010
+
+executable ch17ex
+  main-is: ChapterExercises.hs
+  ghc-options:  -main-is ChapterExercises
+  hs-source-dirs:
+      .
+  build-depends:
+      base >=4.7 && <5
+    , QuickCheck
+    , checkers
+  default-language: Haskell2010
