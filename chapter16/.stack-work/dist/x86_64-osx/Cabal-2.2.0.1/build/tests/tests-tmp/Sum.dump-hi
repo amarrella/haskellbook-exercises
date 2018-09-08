@@ -1,0 +1,474 @@
+
+==================== FINAL INTERFACE ====================
+2018-09-08 13:27:53.172997 UTC
+
+interface main:Sum 8043
+  interface hash: f99996eb065ad72b0f1592d592197559
+  ABI hash: 62c0ff5a000ec789f36526654fe342b8
+  export-list hash: 5eb75d93dc0afc64907391dfcc006959
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 934c3a12e40cba55e42ab1ea071a1162
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Sum.Sum{Sum.First Sum.Second}
+module dependencies:
+package dependencies: QuickCheck-2.11.3 array-0.5.2.0
+                      base-4.11.1.0* containers-0.5.11.0 deepseq-1.4.3.0
+                      ghc-boot-th-8.4.3 ghc-prim-0.5.2.0 integer-gmp-1.0.2.0
+                      pretty-1.1.3.6 primitive-0.6.3.0 random-1.1
+                      template-haskell-2.13.0.0 tf-random-0.5 time-1.8.0.2
+                      transformers-0.5.5.0
+orphans: transformers-0.5.5.0:Control.Monad.Trans.Error
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.11.1.0:GHC.Float
+         base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Complex base-4.11.1.0:Data.Functor.Compose
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity
+                         base-4.11.1.0:Data.Functor.Product base-4.11.1.0:Data.Functor.Sum
+                         base-4.11.1.0:Data.Monoid base-4.11.1.0:Data.Semigroup
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:Data.Version
+                         base-4.11.1.0:Data.Void base-4.11.1.0:GHC.Exts
+                         base-4.11.1.0:GHC.Generics base-4.11.1.0:GHC.IO.Exception
+                         containers-0.5.11.0:Data.IntMap.Internal
+                         containers-0.5.11.0:Data.IntSet.Internal
+                         containers-0.5.11.0:Data.Map.Internal
+                         containers-0.5.11.0:Data.Sequence.Internal
+                         containers-0.5.11.0:Data.Set.Internal
+                         ghc-boot-th-8.4.3:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.4.3:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.6:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.6:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.3.0:Control.Monad.Primitive
+                         primitive-0.6.3.0:Data.Primitive.ByteArray
+                         template-haskell-2.13.0.0:Language.Haskell.TH.Syntax
+import  -/  QuickCheck-2.11.3:Test.QuickCheck 8597fb70e0afba5fb9d4ded03a4b1b62
+import  -/  QuickCheck-2.11.3:Test.QuickCheck.Arbitrary 4df33de46388caa5cd1ba81ee16f6b92
+import  -/  QuickCheck-2.11.3:Test.QuickCheck.Gen c4ba69576c6fa40fcf812b985e6beea7
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+863fe79baa339939d53be76d288d600f
+  $fArbitrarySum ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b) =>
+    Test.QuickCheck.Arbitrary.Arbitrary (Sum.Sum a b)
+  DFunId
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      (v :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                      (v1 :: Test.QuickCheck.Arbitrary.Arbitrary b).
+                  @ (Sum.Sum a b)
+                  (Sum.$fArbitrarySum1 @ a @ b v v1)
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.N:Gen[0] <Sum.Sum a b>_R))
+                  (\ (ds :: Sum.Sum a b) -> GHC.Types.[] @ (Sum.Sum a b)) -}
+863fe79baa339939d53be76d288d600f
+  $fArbitrarySum1 ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b) =>
+    Test.QuickCheck.Random.QCGen -> GHC.Types.Int -> Sum.Sum a b
+  {- Arity: 4,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ b
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Arbitrary.Arbitrary b)
+                   (w2 :: Test.QuickCheck.Random.QCGen)
+                   (w3 :: GHC.Types.Int) ->
+                 case w2
+                        `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 Sum.$w$carbitrary @ a @ b w w1 ww1 ww2 ww3 ww4 w3 }) -}
+863fe79baa339939d53be76d288d600f
+  $fEqSum ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b) =>
+    GHC.Classes.Eq (Sum.Sum a b)
+  DFunId
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>m, Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      (v :: GHC.Classes.Eq a)
+                      (v1 :: GHC.Classes.Eq b).
+                  @ (Sum.Sum a b)
+                  (Sum.$fEqSum_$c== @ a @ b v v1)
+                  (Sum.$fEqSum_$c/= @ a @ b v v1) -}
+863fe79baa339939d53be76d288d600f
+  $fEqSum_$c/= ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b) =>
+    Sum.Sum a b -> Sum.Sum a b -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (4, False, False)
+                (\ @ a
+                   @ b
+                   ($dEq :: GHC.Classes.Eq a)
+                   ($dEq1 :: GHC.Classes.Eq b)
+                   (x :: Sum.Sum a b)
+                   (y :: Sum.Sum a b) ->
+                 case x of wild {
+                   Sum.First a1
+                   -> case y of wild1 {
+                        Sum.First b1
+                        -> case GHC.Classes.== @ a $dEq a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False }
+                        Sum.Second ipv -> GHC.Types.True }
+                   Sum.Second a1
+                   -> case y of wild1 {
+                        Sum.First ipv -> GHC.Types.True
+                        Sum.Second b1
+                        -> case GHC.Classes.== @ b $dEq1 a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False } } }) -}
+863fe79baa339939d53be76d288d600f
+  $fEqSum_$c== ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq b) =>
+    Sum.Sum a b -> Sum.Sum a b -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,1*U><S,1*U>,
+     Unfolding: (\ @ a
+                   @ b
+                   ($dEq :: GHC.Classes.Eq a)
+                   ($dEq1 :: GHC.Classes.Eq b)
+                   (ds :: Sum.Sum a b)
+                   (ds1 :: Sum.Sum a b) ->
+                 case ds of wild {
+                   Sum.First a1
+                   -> case ds1 of wild1 {
+                        Sum.First b1 -> GHC.Classes.== @ a $dEq a1 b1
+                        Sum.Second ipv -> GHC.Types.False }
+                   Sum.Second a1
+                   -> case ds1 of wild1 {
+                        Sum.First ipv -> GHC.Types.False
+                        Sum.Second b1 -> GHC.Classes.== @ b $dEq1 a1 b1 } }) -}
+863fe79baa339939d53be76d288d600f
+  $fFunctorSum :: GHC.Base.Functor (Sum.Sum a)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun: @ a.
+                  @ (Sum.Sum a)
+                  (Sum.$fFunctorSum_$cfmap @ a)
+                  (Sum.$fFunctorSum_$c<$ @ a) -}
+863fe79baa339939d53be76d288d600f
+  $fFunctorSum_$c<$ :: a2 -> Sum.Sum a1 b -> Sum.Sum a1 a2
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ a1 @ b (x :: a1) (ds :: Sum.Sum a b) ->
+                 case ds of wild {
+                   Sum.First a2 -> Sum.First @ a @ a1 a2
+                   Sum.Second b1 -> Sum.Second @ a @ a1 x }) -}
+863fe79baa339939d53be76d288d600f
+  $fFunctorSum_$cfmap :: (a2 -> b) -> Sum.Sum a1 a2 -> Sum.Sum a1 b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*C1(U)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ a1 @ b (f :: a1 -> b) (ds :: Sum.Sum a a1) ->
+                 case ds of wild {
+                   Sum.First a2 -> Sum.First @ a @ b a2
+                   Sum.Second b1 -> Sum.Second @ a @ b (f b1) }) -}
+863fe79baa339939d53be76d288d600f
+  $fShowSum ::
+    (GHC.Show.Show a, GHC.Show.Show b) => GHC.Show.Show (Sum.Sum a b)
+  DFunId
+  {- Arity: 2,
+     Strictness: <L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a
+                      @ b
+                      (v :: GHC.Show.Show a)
+                      (v1 :: GHC.Show.Show b).
+                  @ (Sum.Sum a b)
+                  (Sum.$fShowSum_$cshowsPrec @ a @ b v v1)
+                  (Sum.$fShowSum_$cshow @ a @ b v v1)
+                  (Sum.$fShowSum_$cshowList @ a @ b v v1) -}
+9f9d4b5db9724016738ac621ed0b909e
+  $fShowSum1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+d6457cb351550bf7802fb4f413caa43f
+  $fShowSum2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Sum.$fShowSum3) -}
+004a098071d994f697fc07b3c92ac11b
+  $fShowSum3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Second "#) -}
+88fdbe0c9e586d70d856533f783bb4f5
+  $fShowSum4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Sum.$fShowSum5) -}
+8af596f3adbcaa4c194836a64cc685a9
+  $fShowSum5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("First "#) -}
+a7cb2e4b0aa8c61634fba7190bf99c39
+  $fShowSum6 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11#) -}
+863fe79baa339939d53be76d288d600f
+  $fShowSum_$cshow ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    Sum.Sum a b -> GHC.Base.String
+  {- Arity: 3,
+     Strictness: <L,1*U(1*C1(C1(C1(U))),A,A)><L,1*U(1*C1(C1(C1(U))),A,A)><S,1*U>,
+     Unfolding: (\ @ a
+                   @ b
+                   ($dShow :: GHC.Show.Show a)
+                   ($dShow1 :: GHC.Show.Show b)
+                   (x :: Sum.Sum a b) ->
+                 case x of wild {
+                   Sum.First b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Sum.$fShowSum4
+                        (GHC.Show.showsPrec
+                           @ a
+                           $dShow
+                           Sum.$fShowSum6
+                           b1
+                           (GHC.Types.[] @ GHC.Types.Char))
+                   Sum.Second b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Sum.$fShowSum2
+                        (GHC.Show.showsPrec
+                           @ b
+                           $dShow1
+                           Sum.$fShowSum6
+                           b1
+                           (GHC.Types.[] @ GHC.Types.Char)) }) -}
+863fe79baa339939d53be76d288d600f
+  $fShowSum_$cshowList ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    [Sum.Sum a b] -> GHC.Show.ShowS
+  {- Arity: 4,
+     Strictness: <L,U(C(C1(C(U))),A,A)><L,U(C(C1(C(U))),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ b
+                   ($dShow :: GHC.Show.Show a)
+                   ($dShow1 :: GHC.Show.Show b)
+                   (ls :: [Sum.Sum a b])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (Sum.Sum a b)
+                   (Sum.$fShowSum_$cshowsPrec @ a @ b $dShow $dShow1 Sum.$fShowSum1)
+                   ls
+                   s) -}
+863fe79baa339939d53be76d288d600f
+  $fShowSum_$cshowsPrec ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    GHC.Types.Int -> Sum.Sum a b -> GHC.Show.ShowS
+  {- Arity: 4,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><S(S),1*U(U)><S,1*U>,
+     Inline: [0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ b
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Show.Show b)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: Sum.Sum a b) ->
+                 case w2 of ww { GHC.Types.I# ww1 ->
+                 Sum.$w$cshowsPrec @ a @ b w w1 ww1 w3 }) -}
+5fe2fa97d2eb058d0c215511c0819c5c
+  $tc'First :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3444201532345273687##
+                   10046024401146172914##
+                   Sum.$trModule
+                   Sum.$tc'First2
+                   2#
+                   Sum.$tc'First1) -}
+6d1334c3d3f7dd41579357a0017ac698
+  $tc'First1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+18207d4c3ebd8a2a572f6886dc9b119a
+  $tc'First2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sum.$tc'First3) -}
+65689ad0cf879730f2bb5b4ac30b36e1
+  $tc'First3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'First"#) -}
+ed4ddc389186e03c98a0e666729bb943
+  $tc'Second :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5858883631054626915##
+                   15157452244210565253##
+                   Sum.$trModule
+                   Sum.$tc'Second2
+                   2#
+                   Sum.$tc'Second1) -}
+ed3c66b92a20558368033faf98df4094
+  $tc'Second1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+7beef519309a60019c261b940a2bfbd4
+  $tc'Second2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sum.$tc'Second3) -}
+2d3cba531e2e2452843c2eb9aa84c526
+  $tc'Second3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Second"#) -}
+2548a81272b8cedc124a811f55763467
+  $tcSum :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3887952442098308765##
+                   12310549679166509252##
+                   Sum.$trModule
+                   Sum.$trModule1
+                   0#
+                   GHC.Types.krep$*->*->*) -}
+1feb8384232c73ef4bed7ca122219e47
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Sum.$trModule3 Sum.$trModule1) -}
+0f62dc374b9de69f5fa0c98f9e0b900a
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sum.$trModule2) -}
+a5ec4e07345daad90cc0117069f7d923
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Sum"#) -}
+c04daa1e78a0792e27fe6a0237fbc402
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sum.$trModule4) -}
+7452fee9d63d76d519ebad25123812ee
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+863fe79baa339939d53be76d288d600f
+  $w$carbitrary ::
+    (Test.QuickCheck.Arbitrary.Arbitrary a,
+     Test.QuickCheck.Arbitrary.Arbitrary b) =>
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Sum.Sum a b
+  {- Arity: 7,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,U><S,U><S,U><S,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Arbitrary.Arbitrary b)
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w2 :: GHC.Types.Int) ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww
+                        ww1
+                        ww2
+                        ww3 of ww7 { (#,#) ww8 ww9 ->
+                 case ww9 of ww4 { System.Random.TF.Gen.TFGen ww5 ww6 ww10 ww11 ww12 ww13 ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww5
+                        ww6
+                        ww10
+                        ww11 of ww14 { (#,#) ww15 ww16 ->
+                 (Test.QuickCheck.Gen.elements
+                    @ (Sum.Sum a b)
+                    (GHC.Types.:
+                       @ (Sum.Sum a b)
+                       (Sum.First
+                          @ a
+                          @ b
+                          ((Test.QuickCheck.Arbitrary.arbitrary @ a w)
+                             `cast`
+                           (Test.QuickCheck.Gen.N:Gen[0] <a>_R)
+                             ww8 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                             w2))
+                       (GHC.Types.:
+                          @ (Sum.Sum a b)
+                          (Sum.Second
+                             @ a
+                             @ b
+                             ((Test.QuickCheck.Arbitrary.arbitrary @ b w1)
+                                `cast`
+                              (Test.QuickCheck.Gen.N:Gen[0] <b>_R)
+                                ww15 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                                w2))
+                          (GHC.Types.[] @ (Sum.Sum a b)))))
+                   `cast`
+                 (Test.QuickCheck.Gen.N:Gen[0] <Sum.Sum a b>_R)
+                   ww16 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                   w2 } } }) -}
+863fe79baa339939d53be76d288d600f
+  $w$cshowsPrec ::
+    (GHC.Show.Show a, GHC.Show.Show b) =>
+    GHC.Prim.Int# -> Sum.Sum a b -> GHC.Show.ShowS
+  {- Arity: 4,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(1*C1(C1(C(U))),A,A)><S,U><S,1*U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Show.Show b)
+                   (ww :: GHC.Prim.Int#)
+                   (w2 :: Sum.Sum a b) ->
+                 case w2 of wild {
+                   Sum.First b1
+                   -> let {
+                        g :: GHC.Base.String -> GHC.Base.String
+                        = GHC.Show.showsPrec @ a w Sum.$fShowSum6 b1
+                      } in
+                      case GHC.Prim.>=# ww 11# of lwild {
+                        DEFAULT
+                        -> \ (x :: GHC.Base.String) ->
+                           GHC.Base.++ @ GHC.Types.Char Sum.$fShowSum4 (g x)
+                        1#
+                        -> \ (x :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Sum.$fShowSum4
+                                (g (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 x))) }
+                   Sum.Second b1
+                   -> let {
+                        g :: GHC.Base.String -> GHC.Base.String
+                        = GHC.Show.showsPrec @ b w1 Sum.$fShowSum6 b1
+                      } in
+                      case GHC.Prim.>=# ww 11# of lwild {
+                        DEFAULT
+                        -> \ (x :: GHC.Base.String) ->
+                           GHC.Base.++ @ GHC.Types.Char Sum.$fShowSum2 (g x)
+                        1#
+                        -> \ (x :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Sum.$fShowSum2
+                                (g (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 x))) } }) -}
+863fe79baa339939d53be76d288d600f
+  data Sum a b = First a | Second b
+instance [safe] Test.QuickCheck.Arbitrary.Arbitrary [Sum.Sum]
+  = Sum.$fArbitrarySum
+instance [safe] GHC.Classes.Eq [Sum.Sum] = Sum.$fEqSum
+instance [safe] GHC.Base.Functor [Sum.Sum] = Sum.$fFunctorSum
+instance [safe] GHC.Show.Show [Sum.Sum] = Sum.$fShowSum
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

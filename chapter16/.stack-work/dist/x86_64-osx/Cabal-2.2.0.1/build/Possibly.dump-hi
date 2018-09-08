@@ -1,0 +1,406 @@
+
+==================== FINAL INTERFACE ====================
+2018-09-08 13:23:27.634134 UTC
+
+interface chapter16-0.1.0.0-5XgB7WzA3TFGiEioj7RtiQ:Possibly 8043
+  interface hash: c6e5793da4a1fc8e5a691d1aebcbfee8
+  ABI hash: 917ee2f3e814a669902385ea54cc844c
+  export-list hash: e87456d13ec49cad9d6f7833c6188e95
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 3ca0e9ce8abe674dfb91bcf1ae79f576
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Possibly.Possibly{Possibly.LolNope Possibly.Yeppers}
+module dependencies:
+package dependencies: QuickCheck-2.11.3 array-0.5.2.0
+                      base-4.11.1.0* containers-0.5.11.0 deepseq-1.4.3.0
+                      ghc-boot-th-8.4.3 ghc-prim-0.5.2.0 integer-gmp-1.0.2.0
+                      pretty-1.1.3.6 primitive-0.6.3.0 random-1.1
+                      template-haskell-2.13.0.0 tf-random-0.5 time-1.8.0.2
+                      transformers-0.5.5.0
+orphans: transformers-0.5.5.0:Control.Monad.Trans.Error
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.11.1.0:GHC.Float
+         base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Complex base-4.11.1.0:Data.Functor.Compose
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity
+                         base-4.11.1.0:Data.Functor.Product base-4.11.1.0:Data.Functor.Sum
+                         base-4.11.1.0:Data.Monoid base-4.11.1.0:Data.Semigroup
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:Data.Version
+                         base-4.11.1.0:Data.Void base-4.11.1.0:GHC.Exts
+                         base-4.11.1.0:GHC.Generics base-4.11.1.0:GHC.IO.Exception
+                         containers-0.5.11.0:Data.IntMap.Internal
+                         containers-0.5.11.0:Data.IntSet.Internal
+                         containers-0.5.11.0:Data.Map.Internal
+                         containers-0.5.11.0:Data.Sequence.Internal
+                         containers-0.5.11.0:Data.Set.Internal
+                         ghc-boot-th-8.4.3:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.4.3:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.6:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.6:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.3.0:Control.Monad.Primitive
+                         primitive-0.6.3.0:Data.Primitive.ByteArray
+                         template-haskell-2.13.0.0:Language.Haskell.TH.Syntax
+import  -/  QuickCheck-2.11.3:Test.QuickCheck 8597fb70e0afba5fb9d4ded03a4b1b62
+import  -/  QuickCheck-2.11.3:Test.QuickCheck.Arbitrary 4df33de46388caa5cd1ba81ee16f6b92
+import  -/  QuickCheck-2.11.3:Test.QuickCheck.Gen c4ba69576c6fa40fcf812b985e6beea7
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+29bf7ff5c685375b6ed753661d95005c
+  $fArbitraryPossibly ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    Test.QuickCheck.Arbitrary.Arbitrary (Possibly.Possibly a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A)>m, Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: Test.QuickCheck.Arbitrary.Arbitrary a).
+                  @ (Possibly.Possibly a)
+                  (Possibly.$fArbitraryPossibly1 @ a v)
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.N:Gen[0] <Possibly.Possibly a>_R))
+                  (\ (ds :: Possibly.Possibly a) ->
+                   GHC.Types.[] @ (Possibly.Possibly a)) -}
+29bf7ff5c685375b6ed753661d95005c
+  $fArbitraryPossibly1 ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> Possibly.Possibly a
+  {- Arity: 3,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Random.QCGen)
+                   (w2 :: GHC.Types.Int) ->
+                 case w1
+                        `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 Possibly.$w$carbitrary @ a w ww1 ww2 ww3 ww4 w2 }) -}
+29bf7ff5c685375b6ed753661d95005c
+  $fEqPossibly ::
+    GHC.Classes.Eq a => GHC.Classes.Eq (Possibly.Possibly a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: GHC.Classes.Eq a).
+                  @ (Possibly.Possibly a)
+                  (Possibly.$fEqPossibly_$c== @ a v)
+                  (Possibly.$fEqPossibly_$c/= @ a v) -}
+29bf7ff5c685375b6ed753661d95005c
+  $fEqPossibly_$c/= ::
+    GHC.Classes.Eq a =>
+    Possibly.Possibly a -> Possibly.Possibly a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (x :: Possibly.Possibly a)
+                   (y :: Possibly.Possibly a) ->
+                 case x of wild {
+                   Possibly.LolNope
+                   -> case y of wild1 {
+                        Possibly.LolNope -> GHC.Types.False
+                        Possibly.Yeppers ipv -> GHC.Types.True }
+                   Possibly.Yeppers a1
+                   -> case y of wild1 {
+                        Possibly.LolNope -> GHC.Types.True
+                        Possibly.Yeppers b1
+                        -> case GHC.Classes.== @ a $dEq a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False } } }) -}
+29bf7ff5c685375b6ed753661d95005c
+  $fEqPossibly_$c== ::
+    GHC.Classes.Eq a =>
+    Possibly.Possibly a -> Possibly.Possibly a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S,1*U><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (ds :: Possibly.Possibly a)
+                   (ds1 :: Possibly.Possibly a) ->
+                 case ds of wild {
+                   Possibly.LolNope
+                   -> case ds1 of wild1 {
+                        Possibly.LolNope -> GHC.Types.True
+                        Possibly.Yeppers ipv -> GHC.Types.False }
+                   Possibly.Yeppers a1
+                   -> case ds1 of wild1 {
+                        Possibly.LolNope -> GHC.Types.False
+                        Possibly.Yeppers b1 -> GHC.Classes.== @ a $dEq a1 b1 } }) -}
+29bf7ff5c685375b6ed753661d95005c
+  $fFunctorPossibly :: GHC.Base.Functor Possibly.Possibly
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Possibly.Possibly
+                  Possibly.$fFunctorPossibly_$cfmap
+                  Possibly.$fFunctorPossibly_$c<$ -}
+29bf7ff5c685375b6ed753661d95005c
+  $fFunctorPossibly_$c<$ ::
+    a -> Possibly.Possibly b -> Possibly.Possibly a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ b (x :: a) (ds :: Possibly.Possibly b) ->
+                 case ds of wild {
+                   Possibly.LolNope -> Possibly.LolNope @ a
+                   Possibly.Yeppers a1 -> Possibly.Yeppers @ a x }) -}
+29bf7ff5c685375b6ed753661d95005c
+  $fFunctorPossibly_$cfmap ::
+    (a -> b) -> Possibly.Possibly a -> Possibly.Possibly b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*C1(U)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ b (ds :: a -> b) (ds1 :: Possibly.Possibly a) ->
+                 case ds1 of wild {
+                   Possibly.LolNope -> Possibly.LolNope @ b
+                   Possibly.Yeppers a1 -> Possibly.Yeppers @ b (ds a1) }) -}
+29bf7ff5c685375b6ed753661d95005c
+  $fShowPossibly ::
+    GHC.Show.Show a => GHC.Show.Show (Possibly.Possibly a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(C(U))),A,A)>m, Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: GHC.Show.Show a).
+                  @ (Possibly.Possibly a)
+                  (Possibly.$fShowPossibly_$cshowsPrec @ a v)
+                  (Possibly.$fShowPossibly_$cshow @ a v)
+                  (Possibly.$fShowPossibly_$cshowList @ a v) -}
+51e2ec109cc652206617a8ca29f3c27f
+  $fShowPossibly1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+be1046aa7296446e2fb90a2ef47fa102
+  $fShowPossibly2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Possibly.$fShowPossibly3) -}
+10e6241b4ef9b8debbb4a35b0eebd65f
+  $fShowPossibly3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Yeppers "#) -}
+094589992d7c9bc26c8cc3344bbf8841
+  $fShowPossibly4 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11#) -}
+07f1df6fa4e327a46f447d969583a68f
+  $fShowPossibly5 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Possibly.$fShowPossibly6) -}
+f27086a8a8cd5a5ab44222b53d863a5b
+  $fShowPossibly6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Possibly.$fShowPossibly7) -}
+704f18b765addf5ba607d02918137f6c
+  $fShowPossibly7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("LolNope"#) -}
+29bf7ff5c685375b6ed753661d95005c
+  $fShowPossibly_$cshow ::
+    GHC.Show.Show a => Possibly.Possibly a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U(1*C1(C1(C1(U))),A,A)><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (x :: Possibly.Possibly a) ->
+                 case x of wild {
+                   Possibly.LolNope -> Possibly.$fShowPossibly6
+                   Possibly.Yeppers b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Possibly.$fShowPossibly2
+                        (GHC.Show.showsPrec
+                           @ a
+                           $dShow
+                           Possibly.$fShowPossibly4
+                           b1
+                           (GHC.Types.[] @ GHC.Types.Char)) }) -}
+29bf7ff5c685375b6ed753661d95005c
+  $fShowPossibly_$cshowList ::
+    GHC.Show.Show a => [Possibly.Possibly a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(C(U))),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (ls :: [Possibly.Possibly a])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (Possibly.Possibly a)
+                   (Possibly.$fShowPossibly_$cshowsPrec
+                      @ a
+                      $dShow
+                      Possibly.$fShowPossibly1)
+                   ls
+                   s) -}
+29bf7ff5c685375b6ed753661d95005c
+  $fShowPossibly_$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Types.Int -> Possibly.Possibly a -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(U)><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (ds :: GHC.Types.Int)
+                   (ds1 :: Possibly.Possibly a) ->
+                 case ds1 of wild {
+                   Possibly.LolNope -> Possibly.$fShowPossibly5
+                   Possibly.Yeppers b1
+                   -> case ds of wild1 { GHC.Types.I# x ->
+                      let {
+                        g :: GHC.Base.String -> GHC.Base.String
+                        = GHC.Show.showsPrec @ a $dShow Possibly.$fShowPossibly4 b1
+                      } in
+                      case GHC.Prim.>=# x 11# of lwild {
+                        DEFAULT
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Base.++ @ GHC.Types.Char Possibly.$fShowPossibly2 (g x1)
+                        1#
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Possibly.$fShowPossibly2
+                                (g (GHC.Types.:
+                                      @ GHC.Types.Char
+                                      GHC.Show.$fShow(,)2
+                                      x1))) } } }) -}
+601c8860a022da4813e7923f76ba9859
+  $tc'LolNope :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6601575909707119634##
+                   1253201287468968842##
+                   Possibly.$trModule
+                   Possibly.$tc'LolNope2
+                   1#
+                   Possibly.$tc'LolNope1) -}
+58881d601629194b15e51ff0f3d048a0
+  $tc'LolNope1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+b7800af434fce80a156ebee84d0034b0
+  $tc'LolNope2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Possibly.$tc'LolNope3) -}
+be2d74096ff23f13dc4aa7eb1e93995b
+  $tc'LolNope3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'LolNope"#) -}
+7167a93f805170fb2b6fee8c4bc3ba25
+  $tc'Yeppers :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12493898540885663028##
+                   10719196365156983948##
+                   Possibly.$trModule
+                   Possibly.$tc'Yeppers2
+                   1#
+                   Possibly.$tc'Yeppers1) -}
+5371c9fce232de64d0f10f0f079c7ba2
+  $tc'Yeppers1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+185bd21e62a2f35dd3cd9c4d5ca1df50
+  $tc'Yeppers2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Possibly.$tc'Yeppers3) -}
+45c90a30c4dc15f7429fbcbfbfef8b38
+  $tc'Yeppers3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Yeppers"#) -}
+3b571c454d5422ce8c1c693de7b69d4d
+  $tcPossibly :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2737820425310002835##
+                   4851254618602619664##
+                   Possibly.$trModule
+                   Possibly.$trModule1
+                   0#
+                   GHC.Types.krep$*Arr*) -}
+72ad469a099c14b83006350bf86d8775
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Possibly.$trModule3
+                   Possibly.$trModule1) -}
+60cb88d64f7499b211d7363afa0b54f4
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Possibly.$trModule2) -}
+060f89b893a325cd99f457272eb0e061
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Possibly"#) -}
+ad1f2ad68c9195263ab612e5d6f2ac36
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Possibly.$trModule4) -}
+7bc415c5c7981b06991248570444a557
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("chapter16-0.1.0.0-5XgB7WzA3TFGiEioj7RtiQ"#) -}
+29bf7ff5c685375b6ed753661d95005c
+  $w$carbitrary ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Possibly.Possibly a
+  {- Arity: 6,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S,U><S,U><S,U><S,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w1 :: GHC.Types.Int) ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww
+                        ww1
+                        ww2
+                        ww3 of ww7 { (#,#) ww8 ww9 ->
+                 (Test.QuickCheck.Gen.elements
+                    @ (Possibly.Possibly a)
+                    (GHC.Types.:
+                       @ (Possibly.Possibly a)
+                       (Possibly.LolNope @ a)
+                       (GHC.Types.:
+                          @ (Possibly.Possibly a)
+                          (Possibly.Yeppers
+                             @ a
+                             ((Test.QuickCheck.Arbitrary.arbitrary @ a w)
+                                `cast`
+                              (Test.QuickCheck.Gen.N:Gen[0] <a>_R)
+                                ww8 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                                w1))
+                          (GHC.Types.[] @ (Possibly.Possibly a)))))
+                   `cast`
+                 (Test.QuickCheck.Gen.N:Gen[0] <Possibly.Possibly a>_R)
+                   ww9 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                   w1 }) -}
+29bf7ff5c685375b6ed753661d95005c
+  data Possibly a = LolNope | Yeppers a
+instance [safe] Test.QuickCheck.Arbitrary.Arbitrary [Possibly.Possibly]
+  = Possibly.$fArbitraryPossibly
+instance [safe] GHC.Classes.Eq [Possibly.Possibly]
+  = Possibly.$fEqPossibly
+instance [safe] GHC.Base.Functor [Possibly.Possibly]
+  = Possibly.$fFunctorPossibly
+instance [safe] GHC.Show.Show [Possibly.Possibly]
+  = Possibly.$fShowPossibly
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

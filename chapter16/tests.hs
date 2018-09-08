@@ -2,6 +2,9 @@
 
 import Laws
 import FunctorExercises
+import Possibly
+import Sum
+import ChapterExercises
 import Test.QuickCheck
 import Test.QuickCheck.Function
 
@@ -31,3 +34,11 @@ main = do
   quickCheck (functorCompose' :: FCInt (Four String Int String Int))
   quickCheck (functorIdentity :: (Four' String Int) -> Bool)
   quickCheck (functorCompose' :: FCInt (Four' String Int))
+  quickCheck (functorIdentity :: (Possibly Int) -> Bool)
+  quickCheck (functorCompose' :: FCInt (Possibly Int))
+  quickCheck (functorIdentity :: (Sum String Int) -> Bool)
+  quickCheck (functorCompose' :: FCInt (Sum String Int))
+  quickCheck (functorIdentity :: (BoolAndSomethingElse Int) -> Bool)
+  quickCheck (functorCompose' :: FCInt (BoolAndSomethingElse Int))
+  quickCheck (functorIdentity :: (BoolAndMaybeSomethingElse Int) -> Bool)
+  quickCheck (functorCompose' :: FCInt (BoolAndMaybeSomethingElse Int))

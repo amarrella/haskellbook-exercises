@@ -1,0 +1,888 @@
+
+==================== FINAL INTERFACE ====================
+2018-09-08 13:57:24.374798 UTC
+
+interface main:ChapterExercises 8043
+  interface hash: 619c770a313c4384912549994d2a52ec
+  ABI hash: 682041efb7d71e08f0bf5e93a8e2ab3d
+  export-list hash: 5dee9723c63c12f6ee806dc0a39eea20
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 934c3a12e40cba55e42ab1ea071a1162
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  ChapterExercises.Bool'{ChapterExercises.False ChapterExercises.True}
+  ChapterExercises.BoolAndMaybeSomethingElse{ChapterExercises.Falsish ChapterExercises.Truish}
+  ChapterExercises.BoolAndSomethingElse{ChapterExercises.False' ChapterExercises.True'}
+module dependencies:
+package dependencies: QuickCheck-2.11.3 array-0.5.2.0
+                      base-4.11.1.0* containers-0.5.11.0 deepseq-1.4.3.0
+                      ghc-boot-th-8.4.3 ghc-prim-0.5.2.0 integer-gmp-1.0.2.0
+                      pretty-1.1.3.6 primitive-0.6.3.0 random-1.1
+                      template-haskell-2.13.0.0 tf-random-0.5 time-1.8.0.2
+                      transformers-0.5.5.0
+orphans: transformers-0.5.5.0:Control.Monad.Trans.Error
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.11.1.0:GHC.Float
+         base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Complex base-4.11.1.0:Data.Functor.Compose
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity
+                         base-4.11.1.0:Data.Functor.Product base-4.11.1.0:Data.Functor.Sum
+                         base-4.11.1.0:Data.Monoid base-4.11.1.0:Data.Semigroup
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:Data.Version
+                         base-4.11.1.0:Data.Void base-4.11.1.0:GHC.Exts
+                         base-4.11.1.0:GHC.Generics base-4.11.1.0:GHC.IO.Exception
+                         containers-0.5.11.0:Data.IntMap.Internal
+                         containers-0.5.11.0:Data.IntSet.Internal
+                         containers-0.5.11.0:Data.Map.Internal
+                         containers-0.5.11.0:Data.Sequence.Internal
+                         containers-0.5.11.0:Data.Set.Internal
+                         ghc-boot-th-8.4.3:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.4.3:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.6:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.6:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.3.0:Control.Monad.Primitive
+                         primitive-0.6.3.0:Data.Primitive.ByteArray
+                         template-haskell-2.13.0.0:Language.Haskell.TH.Syntax
+import  -/  QuickCheck-2.11.3:Test.QuickCheck 8597fb70e0afba5fb9d4ded03a4b1b62
+import  -/  QuickCheck-2.11.3:Test.QuickCheck.Arbitrary 4df33de46388caa5cd1ba81ee16f6b92
+import  -/  QuickCheck-2.11.3:Test.QuickCheck.Gen c4ba69576c6fa40fcf812b985e6beea7
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.Show 73be67392447c974f19c3befd83c46c0
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+170220e296d07cef3e8178b4a86f8bd0
+  $fArbitraryBoolAndMaybeSomethingElse ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    Test.QuickCheck.Arbitrary.Arbitrary
+      (ChapterExercises.BoolAndMaybeSomethingElse a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A)>m, Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: Test.QuickCheck.Arbitrary.Arbitrary a).
+                  @ (ChapterExercises.BoolAndMaybeSomethingElse a)
+                  (ChapterExercises.$fArbitraryBoolAndMaybeSomethingElse1 @ a v)
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                            <ChapterExercises.BoolAndMaybeSomethingElse a>_R))
+                  (\ (ds :: ChapterExercises.BoolAndMaybeSomethingElse a) ->
+                   GHC.Types.[] @ (ChapterExercises.BoolAndMaybeSomethingElse a)) -}
+170220e296d07cef3e8178b4a86f8bd0
+  $fArbitraryBoolAndMaybeSomethingElse1 ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> ChapterExercises.BoolAndMaybeSomethingElse a
+  {- Arity: 3,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Random.QCGen)
+                   (w2 :: GHC.Types.Int) ->
+                 case w1
+                        `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 ChapterExercises.$w$carbitrary @ a w ww1 ww2 ww3 ww4 w2 }) -}
+74c1876b6a18bc4391aea00fd54a47ec
+  $fArbitraryBoolAndSomethingElse ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    Test.QuickCheck.Arbitrary.Arbitrary
+      (ChapterExercises.BoolAndSomethingElse a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A)>m, Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: Test.QuickCheck.Arbitrary.Arbitrary a).
+                  @ (ChapterExercises.BoolAndSomethingElse a)
+                  (ChapterExercises.$fArbitraryBoolAndSomethingElse1 @ a v)
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                            <ChapterExercises.BoolAndSomethingElse a>_R))
+                  (\ (ds :: ChapterExercises.BoolAndSomethingElse a) ->
+                   GHC.Types.[] @ (ChapterExercises.BoolAndSomethingElse a)) -}
+74c1876b6a18bc4391aea00fd54a47ec
+  $fArbitraryBoolAndSomethingElse1 ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> ChapterExercises.BoolAndSomethingElse a
+  {- Arity: 3,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (w1 :: Test.QuickCheck.Random.QCGen)
+                   (w2 :: GHC.Types.Int) ->
+                 case w1
+                        `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 ChapterExercises.$w$carbitrary1 @ a w ww1 ww2 ww3 ww4 w2 }) -}
+170220e296d07cef3e8178b4a86f8bd0
+  $fEqBoolAndMaybeSomethingElse ::
+    GHC.Classes.Eq a =>
+    GHC.Classes.Eq (ChapterExercises.BoolAndMaybeSomethingElse a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: GHC.Classes.Eq a).
+                  @ (ChapterExercises.BoolAndMaybeSomethingElse a)
+                  (ChapterExercises.$fEqBoolAndMaybeSomethingElse_$c== @ a v)
+                  (ChapterExercises.$fEqBoolAndMaybeSomethingElse_$c/= @ a v) -}
+170220e296d07cef3e8178b4a86f8bd0
+  $fEqBoolAndMaybeSomethingElse_$c/= ::
+    GHC.Classes.Eq a =>
+    ChapterExercises.BoolAndMaybeSomethingElse a
+    -> ChapterExercises.BoolAndMaybeSomethingElse a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (x :: ChapterExercises.BoolAndMaybeSomethingElse a)
+                   (y :: ChapterExercises.BoolAndMaybeSomethingElse a) ->
+                 case x of wild {
+                   ChapterExercises.Falsish
+                   -> case y of wild1 {
+                        ChapterExercises.Falsish -> GHC.Types.False
+                        ChapterExercises.Truish ipv -> GHC.Types.True }
+                   ChapterExercises.Truish a1
+                   -> case y of wild1 {
+                        ChapterExercises.Falsish -> GHC.Types.True
+                        ChapterExercises.Truish b1
+                        -> case GHC.Classes.== @ a $dEq a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False } } }) -}
+170220e296d07cef3e8178b4a86f8bd0
+  $fEqBoolAndMaybeSomethingElse_$c== ::
+    GHC.Classes.Eq a =>
+    ChapterExercises.BoolAndMaybeSomethingElse a
+    -> ChapterExercises.BoolAndMaybeSomethingElse a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S,1*U><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (ds :: ChapterExercises.BoolAndMaybeSomethingElse a)
+                   (ds1 :: ChapterExercises.BoolAndMaybeSomethingElse a) ->
+                 case ds of wild {
+                   ChapterExercises.Falsish
+                   -> case ds1 of wild1 {
+                        ChapterExercises.Falsish -> GHC.Types.True
+                        ChapterExercises.Truish ipv -> GHC.Types.False }
+                   ChapterExercises.Truish a1
+                   -> case ds1 of wild1 {
+                        ChapterExercises.Falsish -> GHC.Types.False
+                        ChapterExercises.Truish b1 -> GHC.Classes.== @ a $dEq a1 b1 } }) -}
+74c1876b6a18bc4391aea00fd54a47ec
+  $fEqBoolAndSomethingElse ::
+    GHC.Classes.Eq a =>
+    GHC.Classes.Eq (ChapterExercises.BoolAndSomethingElse a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: GHC.Classes.Eq a).
+                  @ (ChapterExercises.BoolAndSomethingElse a)
+                  (ChapterExercises.$fEqBoolAndSomethingElse_$c== @ a v)
+                  (ChapterExercises.$fEqBoolAndSomethingElse_$c/= @ a v) -}
+74c1876b6a18bc4391aea00fd54a47ec
+  $fEqBoolAndSomethingElse_$c/= ::
+    GHC.Classes.Eq a =>
+    ChapterExercises.BoolAndSomethingElse a
+    -> ChapterExercises.BoolAndSomethingElse a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (x :: ChapterExercises.BoolAndSomethingElse a)
+                   (y :: ChapterExercises.BoolAndSomethingElse a) ->
+                 case ChapterExercises.$fEqBoolAndSomethingElse_$c==
+                        @ a
+                        $dEq
+                        x
+                        y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+74c1876b6a18bc4391aea00fd54a47ec
+  $fEqBoolAndSomethingElse_$c== ::
+    GHC.Classes.Eq a =>
+    ChapterExercises.BoolAndSomethingElse a
+    -> ChapterExercises.BoolAndSomethingElse a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S,1*U><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (ds :: ChapterExercises.BoolAndSomethingElse a)
+                   (ds1 :: ChapterExercises.BoolAndSomethingElse a) ->
+                 case ds of wild {
+                   ChapterExercises.False' a1
+                   -> case ds1 of wild1 {
+                        ChapterExercises.False' b1 -> GHC.Classes.== @ a $dEq a1 b1
+                        ChapterExercises.True' ipv -> GHC.Types.False }
+                   ChapterExercises.True' a1
+                   -> case ds1 of wild1 {
+                        ChapterExercises.False' ipv -> GHC.Types.False
+                        ChapterExercises.True' b1 -> GHC.Classes.== @ a $dEq a1 b1 } }) -}
+170220e296d07cef3e8178b4a86f8bd0
+  $fFunctorBoolAndMaybeSomethingElse ::
+    GHC.Base.Functor ChapterExercises.BoolAndMaybeSomethingElse
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ ChapterExercises.BoolAndMaybeSomethingElse
+                  ChapterExercises.$fFunctorBoolAndMaybeSomethingElse_$cfmap
+                  ChapterExercises.$fFunctorBoolAndMaybeSomethingElse_$c<$ -}
+170220e296d07cef3e8178b4a86f8bd0
+  $fFunctorBoolAndMaybeSomethingElse_$c<$ ::
+    a
+    -> ChapterExercises.BoolAndMaybeSomethingElse b
+    -> ChapterExercises.BoolAndMaybeSomethingElse a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ b
+                   (x :: a)
+                   (ds :: ChapterExercises.BoolAndMaybeSomethingElse b) ->
+                 case ds of wild {
+                   ChapterExercises.Falsish -> ChapterExercises.Falsish @ a
+                   ChapterExercises.Truish a1 -> ChapterExercises.Truish @ a x }) -}
+170220e296d07cef3e8178b4a86f8bd0
+  $fFunctorBoolAndMaybeSomethingElse_$cfmap ::
+    (a -> b)
+    -> ChapterExercises.BoolAndMaybeSomethingElse a
+    -> ChapterExercises.BoolAndMaybeSomethingElse b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*C1(U)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ b
+                   (f :: a -> b)
+                   (ds :: ChapterExercises.BoolAndMaybeSomethingElse a) ->
+                 case ds of wild {
+                   ChapterExercises.Falsish -> ChapterExercises.Falsish @ b
+                   ChapterExercises.Truish a1
+                   -> ChapterExercises.Truish @ b (f a1) }) -}
+74c1876b6a18bc4391aea00fd54a47ec
+  $fFunctorBoolAndSomethingElse ::
+    GHC.Base.Functor ChapterExercises.BoolAndSomethingElse
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ ChapterExercises.BoolAndSomethingElse
+                  ChapterExercises.$fFunctorBoolAndSomethingElse_$cfmap
+                  ChapterExercises.$fFunctorBoolAndSomethingElse_$c<$ -}
+74c1876b6a18bc4391aea00fd54a47ec
+  $fFunctorBoolAndSomethingElse_$c<$ ::
+    a
+    -> ChapterExercises.BoolAndSomethingElse b
+    -> ChapterExercises.BoolAndSomethingElse a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ b
+                   (x :: a)
+                   (eta :: ChapterExercises.BoolAndSomethingElse b) ->
+                 case eta of wild {
+                   ChapterExercises.False' a1 -> ChapterExercises.False' @ a x
+                   ChapterExercises.True' a1 -> ChapterExercises.True' @ a x }) -}
+74c1876b6a18bc4391aea00fd54a47ec
+  $fFunctorBoolAndSomethingElse_$cfmap ::
+    (a -> b)
+    -> ChapterExercises.BoolAndSomethingElse a
+    -> ChapterExercises.BoolAndSomethingElse b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*C1(U)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ b
+                   (f :: a -> b)
+                   (ds :: ChapterExercises.BoolAndSomethingElse a) ->
+                 case ds of wild {
+                   ChapterExercises.False' a1 -> ChapterExercises.False' @ b (f a1)
+                   ChapterExercises.True' a1
+                   -> ChapterExercises.True' @ b (f a1) }) -}
+170220e296d07cef3e8178b4a86f8bd0
+  $fShowBoolAndMaybeSomethingElse ::
+    GHC.Show.Show a =>
+    GHC.Show.Show (ChapterExercises.BoolAndMaybeSomethingElse a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(C(U))),A,A)>m, Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: GHC.Show.Show a).
+                  @ (ChapterExercises.BoolAndMaybeSomethingElse a)
+                  (ChapterExercises.$fShowBoolAndMaybeSomethingElse_$cshowsPrec
+                     @ a
+                     v)
+                  (ChapterExercises.$fShowBoolAndMaybeSomethingElse_$cshow @ a v)
+                  (ChapterExercises.$fShowBoolAndMaybeSomethingElse_$cshowList
+                     @ a
+                     v) -}
+90ed7f2dfae0e9a9b7fec5b119849f5a
+  $fShowBoolAndMaybeSomethingElse1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+25660bfd7634a3c2a490a7d95c6cc5c9
+  $fShowBoolAndMaybeSomethingElse2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ChapterExercises.$fShowBoolAndMaybeSomethingElse3) -}
+8c8e97a2aa2ebb6de801c2a50034bb81
+  $fShowBoolAndMaybeSomethingElse3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Truish "#) -}
+f56de1cc26d3b032bfa6bb53ebacd8c7
+  $fShowBoolAndMaybeSomethingElse4 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11#) -}
+0c9811724b9fb34ea0cdde5c994c61ac
+  $fShowBoolAndMaybeSomethingElse5 ::
+    [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   ChapterExercises.$fShowBoolAndMaybeSomethingElse6) -}
+9833a351472156771b93a973de6eada8
+  $fShowBoolAndMaybeSomethingElse6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ChapterExercises.$fShowBoolAndMaybeSomethingElse7) -}
+b30cdca60e98fd7aca7881f1c9baeac4
+  $fShowBoolAndMaybeSomethingElse7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Falsish"#) -}
+170220e296d07cef3e8178b4a86f8bd0
+  $fShowBoolAndMaybeSomethingElse_$cshow ::
+    GHC.Show.Show a =>
+    ChapterExercises.BoolAndMaybeSomethingElse a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U(1*C1(C1(C1(U))),A,A)><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (x :: ChapterExercises.BoolAndMaybeSomethingElse a) ->
+                 case x of wild {
+                   ChapterExercises.Falsish
+                   -> ChapterExercises.$fShowBoolAndMaybeSomethingElse6
+                   ChapterExercises.Truish b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        ChapterExercises.$fShowBoolAndMaybeSomethingElse2
+                        (GHC.Show.showsPrec
+                           @ a
+                           $dShow
+                           ChapterExercises.$fShowBoolAndMaybeSomethingElse4
+                           b1
+                           (GHC.Types.[] @ GHC.Types.Char)) }) -}
+170220e296d07cef3e8178b4a86f8bd0
+  $fShowBoolAndMaybeSomethingElse_$cshowList ::
+    GHC.Show.Show a =>
+    [ChapterExercises.BoolAndMaybeSomethingElse a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(C(U))),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (ls :: [ChapterExercises.BoolAndMaybeSomethingElse a])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (ChapterExercises.BoolAndMaybeSomethingElse a)
+                   (ChapterExercises.$fShowBoolAndMaybeSomethingElse_$cshowsPrec
+                      @ a
+                      $dShow
+                      ChapterExercises.$fShowBoolAndMaybeSomethingElse1)
+                   ls
+                   s) -}
+170220e296d07cef3e8178b4a86f8bd0
+  $fShowBoolAndMaybeSomethingElse_$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Types.Int
+    -> ChapterExercises.BoolAndMaybeSomethingElse a -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><L,1*U(U)><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (ds :: GHC.Types.Int)
+                   (ds1 :: ChapterExercises.BoolAndMaybeSomethingElse a) ->
+                 case ds1 of wild {
+                   ChapterExercises.Falsish
+                   -> ChapterExercises.$fShowBoolAndMaybeSomethingElse5
+                   ChapterExercises.Truish b1
+                   -> case ds of wild1 { GHC.Types.I# x ->
+                      let {
+                        g :: GHC.Base.String -> GHC.Base.String
+                        = GHC.Show.showsPrec
+                            @ a
+                            $dShow
+                            ChapterExercises.$fShowBoolAndMaybeSomethingElse4
+                            b1
+                      } in
+                      case GHC.Prim.>=# x 11# of lwild {
+                        DEFAULT
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Base.++
+                             @ GHC.Types.Char
+                             ChapterExercises.$fShowBoolAndMaybeSomethingElse2
+                             (g x1)
+                        1#
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                ChapterExercises.$fShowBoolAndMaybeSomethingElse2
+                                (g (GHC.Types.:
+                                      @ GHC.Types.Char
+                                      GHC.Show.$fShow(,)2
+                                      x1))) } } }) -}
+74c1876b6a18bc4391aea00fd54a47ec
+  $fShowBoolAndSomethingElse ::
+    GHC.Show.Show a =>
+    GHC.Show.Show (ChapterExercises.BoolAndSomethingElse a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(C(U))),A,A)>m, Inline: CONLIKE,
+     Unfolding: DFun: @ a (v :: GHC.Show.Show a).
+                  @ (ChapterExercises.BoolAndSomethingElse a)
+                  (ChapterExercises.$fShowBoolAndSomethingElse_$cshowsPrec @ a v)
+                  (ChapterExercises.$fShowBoolAndSomethingElse_$cshow @ a v)
+                  (ChapterExercises.$fShowBoolAndSomethingElse_$cshowList @ a v) -}
+2f9d2d993ce0eb90c8272084166a932a
+  $fShowBoolAndSomethingElse1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ChapterExercises.$fShowBoolAndSomethingElse2) -}
+ef33ddd1c891dd217adb949f00bf1192
+  $fShowBoolAndSomethingElse2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("True' "#) -}
+0d186278cc3eb9b64805a6582e51dac2
+  $fShowBoolAndSomethingElse3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ChapterExercises.$fShowBoolAndSomethingElse4) -}
+b25ee3b202f8e5b2e2a72fbcf6eb0978
+  $fShowBoolAndSomethingElse4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("False' "#) -}
+74c1876b6a18bc4391aea00fd54a47ec
+  $fShowBoolAndSomethingElse_$cshow ::
+    GHC.Show.Show a =>
+    ChapterExercises.BoolAndSomethingElse a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U(1*C1(C1(C1(U))),A,A)><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (x :: ChapterExercises.BoolAndSomethingElse a) ->
+                 case x of wild {
+                   ChapterExercises.False' b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        ChapterExercises.$fShowBoolAndSomethingElse3
+                        (GHC.Show.showsPrec
+                           @ a
+                           $dShow
+                           ChapterExercises.$fShowBoolAndMaybeSomethingElse4
+                           b1
+                           (GHC.Types.[] @ GHC.Types.Char))
+                   ChapterExercises.True' b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        ChapterExercises.$fShowBoolAndSomethingElse1
+                        (GHC.Show.showsPrec
+                           @ a
+                           $dShow
+                           ChapterExercises.$fShowBoolAndMaybeSomethingElse4
+                           b1
+                           (GHC.Types.[] @ GHC.Types.Char)) }) -}
+74c1876b6a18bc4391aea00fd54a47ec
+  $fShowBoolAndSomethingElse_$cshowList ::
+    GHC.Show.Show a =>
+    [ChapterExercises.BoolAndSomethingElse a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(C(U))),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (ls :: [ChapterExercises.BoolAndSomethingElse a])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (ChapterExercises.BoolAndSomethingElse a)
+                   (ChapterExercises.$fShowBoolAndSomethingElse_$cshowsPrec
+                      @ a
+                      $dShow
+                      ChapterExercises.$fShowBoolAndMaybeSomethingElse1)
+                   ls
+                   s) -}
+74c1876b6a18bc4391aea00fd54a47ec
+  $fShowBoolAndSomethingElse_$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Types.Int
+    -> ChapterExercises.BoolAndSomethingElse a -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><S(S),1*U(U)><S,1*U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: ChapterExercises.BoolAndSomethingElse a) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 ChapterExercises.$w$cshowsPrec @ a w ww1 w2 }) -}
+aa255bbcf94ef0012951e5d051980682
+  $tc'False :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12277990752784481078##
+                   17609401101319062845##
+                   ChapterExercises.$trModule
+                   ChapterExercises.$tc'False2
+                   0#
+                   ChapterExercises.$tc'False1) -}
+036559b778e2f7a79d9261a333dca696
+  $tc'False' :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18057463789832349908##
+                   2810393040791303229##
+                   ChapterExercises.$trModule
+                   ChapterExercises.$tc'False'2
+                   1#
+                   ChapterExercises.$tc'False'1) -}
+0fe9ecd816f6a0ca619aea6c88eb22bd
+  $tc'False'1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+b3f16d83a14d3e52b055a55299476aa3
+  $tc'False'2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ChapterExercises.$tc'False'3) -}
+40ed1aa262c2bec41b8112dcfa4814fd
+  $tc'False'3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'False'"#) -}
+f62bfe141cbefc5edc024eacd7f96264
+  $tc'False1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+ef80526cfd668f596a0cc832d2f9df9f
+  $tc'False2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ChapterExercises.$tc'False3) -}
+38143b44982027fafc9cc6bba4759693
+  $tc'False3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'False"#) -}
+29595c2605191da8726feacf0e7d183e
+  $tc'Falsish :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   365389282264216675##
+                   16996910546396413758##
+                   ChapterExercises.$trModule
+                   ChapterExercises.$tc'Falsish2
+                   1#
+                   ChapterExercises.$tc'Falsish1) -}
+4dc22089d649a61906b62fdfbebcfe19
+  $tc'Falsish1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+6301b17b24bebda6fd08c88b96a10fdf
+  $tc'Falsish2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ChapterExercises.$tc'Falsish3) -}
+2e2bd37e376d18ca87a9cd7697b5b146
+  $tc'Falsish3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Falsish"#) -}
+29c86c91f64fdc8f3b5362b398d2de71
+  $tc'True :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5169908373473074307##
+                   14839122131299065499##
+                   ChapterExercises.$trModule
+                   ChapterExercises.$tc'True1
+                   0#
+                   ChapterExercises.$tc'False1) -}
+f344d8103cdbcfa688692d34c7c27b34
+  $tc'True' :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10925944943343179531##
+                   11363957439775070135##
+                   ChapterExercises.$trModule
+                   ChapterExercises.$tc'True'1
+                   1#
+                   ChapterExercises.$tc'False'1) -}
+a0100c1b1b9dcd94bde5c77f0c901e44
+  $tc'True'1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ChapterExercises.$tc'True'2) -}
+c9344987667c22d9e91814ed6ef23ea9
+  $tc'True'2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'True'"#) -}
+a091454c04e3d4fc9e41c0074370cff9
+  $tc'True1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ChapterExercises.$tc'True2) -}
+5edbd96d681c4ff0d20532d38c533571
+  $tc'True2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'True"#) -}
+8c7658c1d7626ba25e61cf0782e7a9a5
+  $tc'Truish :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7352078519751923711##
+                   226087627896900889##
+                   ChapterExercises.$trModule
+                   ChapterExercises.$tc'Truish2
+                   1#
+                   ChapterExercises.$tc'Truish1) -}
+b526f8608c50011e7376dec23f21b402
+  $tc'Truish1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+6ee0007486106a894552193919171efe
+  $tc'Truish2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ChapterExercises.$tc'Truish3) -}
+6330ae9f4baef0524d9a7dbd1f137193
+  $tc'Truish3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Truish"#) -}
+71d30a9e9493eac48bbeb976984574e0
+  $tcBool' :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2112758935074619858##
+                   2120529698550955487##
+                   ChapterExercises.$trModule
+                   ChapterExercises.$tcBool'1
+                   0#
+                   GHC.Types.krep$*) -}
+df33c674f4d6e455e157200790268bd1
+  $tcBool'1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ChapterExercises.$tcBool'2) -}
+365d51404eecd52b417d29818325279c
+  $tcBool'2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Bool'"#) -}
+a10d4f1a9d0973e62833c32d13e91fbe
+  $tcBoolAndMaybeSomethingElse :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6284286447213925948##
+                   14591764029729315327##
+                   ChapterExercises.$trModule
+                   ChapterExercises.$tcBoolAndMaybeSomethingElse1
+                   0#
+                   GHC.Types.krep$*Arr*) -}
+8e24af4a59c68a99d0bd512e40e98e87
+  $tcBoolAndMaybeSomethingElse1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   ChapterExercises.$tcBoolAndMaybeSomethingElse2) -}
+a4ee42e7e406c65cb260cbadc0b3f888
+  $tcBoolAndMaybeSomethingElse2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("BoolAndMaybeSomethingElse"#) -}
+a3c37bcbd584877c5be31e8fabdf9a01
+  $tcBoolAndSomethingElse :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9603233283930744522##
+                   5720335423894495617##
+                   ChapterExercises.$trModule
+                   ChapterExercises.$tcBoolAndSomethingElse1
+                   0#
+                   GHC.Types.krep$*Arr*) -}
+270170d4885c7f884708666947f7d9c4
+  $tcBoolAndSomethingElse1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   ChapterExercises.$tcBoolAndSomethingElse2) -}
+479568a4c4fb2934fc60077efaa6cb21
+  $tcBoolAndSomethingElse2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("BoolAndSomethingElse"#) -}
+8d9913417f85cfa809837ae6bb0e90f3
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   ChapterExercises.$trModule3
+                   ChapterExercises.$trModule1) -}
+d4b6d981f0ea8a60948cd8123a1f76e9
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ChapterExercises.$trModule2) -}
+f9787de9d098de6dab569453d3a47627
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("ChapterExercises"#) -}
+8537f590e1340bf58430bfc3233d58a6
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ChapterExercises.$trModule4) -}
+7fac367eb10173dd62efa27ca87717f1
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+170220e296d07cef3e8178b4a86f8bd0
+  $w$carbitrary ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> ChapterExercises.BoolAndMaybeSomethingElse a
+  {- Arity: 6,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S,U><S,U><S,U><S,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w1 :: GHC.Types.Int) ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww
+                        ww1
+                        ww2
+                        ww3 of ww7 { (#,#) ww8 ww9 ->
+                 (Test.QuickCheck.Gen.elements
+                    @ (ChapterExercises.BoolAndMaybeSomethingElse a)
+                    (GHC.Types.:
+                       @ (ChapterExercises.BoolAndMaybeSomethingElse a)
+                       (ChapterExercises.Falsish @ a)
+                       (GHC.Types.:
+                          @ (ChapterExercises.BoolAndMaybeSomethingElse a)
+                          (ChapterExercises.Truish
+                             @ a
+                             ((Test.QuickCheck.Arbitrary.arbitrary @ a w)
+                                `cast`
+                              (Test.QuickCheck.Gen.N:Gen[0] <a>_R)
+                                ww8 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                                w1))
+                          (GHC.Types.[] @ (ChapterExercises.BoolAndMaybeSomethingElse a)))))
+                   `cast`
+                 (Test.QuickCheck.Gen.N:Gen[0]
+                      <ChapterExercises.BoolAndMaybeSomethingElse a>_R)
+                   ww9 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                   w1 }) -}
+74c1876b6a18bc4391aea00fd54a47ec
+  $w$carbitrary1 ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> ChapterExercises.BoolAndSomethingElse a
+  {- Arity: 6,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><S,U><S,U><S,U><S,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w1 :: GHC.Types.Int) ->
+                 case System.Random.TF.Gen.$wtfGenSplit
+                        ww
+                        ww1
+                        ww2
+                        ww3 of ww7 { (#,#) ww8 ww9 ->
+                 let {
+                   a1 :: a
+                   = (Test.QuickCheck.Arbitrary.arbitrary @ a w)
+                       `cast`
+                     (Test.QuickCheck.Gen.N:Gen[0] <a>_R)
+                       ww8 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                       w1
+                 } in
+                 (Test.QuickCheck.Gen.elements
+                    @ (ChapterExercises.BoolAndSomethingElse a)
+                    (GHC.Types.:
+                       @ (ChapterExercises.BoolAndSomethingElse a)
+                       (ChapterExercises.False' @ a a1)
+                       (GHC.Types.:
+                          @ (ChapterExercises.BoolAndSomethingElse a)
+                          (ChapterExercises.True' @ a a1)
+                          (GHC.Types.[] @ (ChapterExercises.BoolAndSomethingElse a)))))
+                   `cast`
+                 (Test.QuickCheck.Gen.N:Gen[0]
+                      <ChapterExercises.BoolAndSomethingElse a>_R)
+                   ww9 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                   w1 }) -}
+74c1876b6a18bc4391aea00fd54a47ec
+  $w$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Prim.Int#
+    -> ChapterExercises.BoolAndSomethingElse a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(1*C1(C1(C(U))),A,A)><S,U><S,1*U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (ww :: GHC.Prim.Int#)
+                   (w1 :: ChapterExercises.BoolAndSomethingElse a) ->
+                 case w1 of wild {
+                   ChapterExercises.False' b1
+                   -> let {
+                        g :: GHC.Base.String -> GHC.Base.String
+                        = GHC.Show.showsPrec
+                            @ a
+                            w
+                            ChapterExercises.$fShowBoolAndMaybeSomethingElse4
+                            b1
+                      } in
+                      case GHC.Prim.>=# ww 11# of lwild {
+                        DEFAULT
+                        -> \ (x :: GHC.Base.String) ->
+                           GHC.Base.++
+                             @ GHC.Types.Char
+                             ChapterExercises.$fShowBoolAndSomethingElse3
+                             (g x)
+                        1#
+                        -> \ (x :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                ChapterExercises.$fShowBoolAndSomethingElse3
+                                (g (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 x))) }
+                   ChapterExercises.True' b1
+                   -> let {
+                        g :: GHC.Base.String -> GHC.Base.String
+                        = GHC.Show.showsPrec
+                            @ a
+                            w
+                            ChapterExercises.$fShowBoolAndMaybeSomethingElse4
+                            b1
+                      } in
+                      case GHC.Prim.>=# ww 11# of lwild {
+                        DEFAULT
+                        -> \ (x :: GHC.Base.String) ->
+                           GHC.Base.++
+                             @ GHC.Types.Char
+                             ChapterExercises.$fShowBoolAndSomethingElse1
+                             (g x)
+                        1#
+                        -> \ (x :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                ChapterExercises.$fShowBoolAndSomethingElse1
+                                (g (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 x))) } }) -}
+6afae25d4f75e16aafb5de79f2452922
+  data Bool' = False | True
+170220e296d07cef3e8178b4a86f8bd0
+  data BoolAndMaybeSomethingElse a = Falsish | Truish a
+74c1876b6a18bc4391aea00fd54a47ec
+  data BoolAndSomethingElse a = False' a | True' a
+instance [safe] Test.QuickCheck.Arbitrary.Arbitrary [ChapterExercises.BoolAndMaybeSomethingElse]
+  = ChapterExercises.$fArbitraryBoolAndMaybeSomethingElse
+instance [safe] Test.QuickCheck.Arbitrary.Arbitrary [ChapterExercises.BoolAndSomethingElse]
+  = ChapterExercises.$fArbitraryBoolAndSomethingElse
+instance [safe] GHC.Classes.Eq [ChapterExercises.BoolAndMaybeSomethingElse]
+  = ChapterExercises.$fEqBoolAndMaybeSomethingElse
+instance [safe] GHC.Classes.Eq [ChapterExercises.BoolAndSomethingElse]
+  = ChapterExercises.$fEqBoolAndSomethingElse
+instance [safe] GHC.Base.Functor [ChapterExercises.BoolAndMaybeSomethingElse]
+  = ChapterExercises.$fFunctorBoolAndMaybeSomethingElse
+instance [safe] GHC.Base.Functor [ChapterExercises.BoolAndSomethingElse]
+  = ChapterExercises.$fFunctorBoolAndSomethingElse
+instance [safe] GHC.Show.Show [ChapterExercises.BoolAndMaybeSomethingElse]
+  = ChapterExercises.$fShowBoolAndMaybeSomethingElse
+instance [safe] GHC.Show.Show [ChapterExercises.BoolAndSomethingElse]
+  = ChapterExercises.$fShowBoolAndSomethingElse
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

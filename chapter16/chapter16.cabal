@@ -5,7 +5,10 @@ cabal-version:       >=1.10
 library
   other-modules:
       Laws,
-      FunctorExercises
+      FunctorExercises,
+      Possibly,
+      Sum,
+      ChapterExercises
   ghc-options:
       -Wall -fwarn-tabs
   hs-source-dirs:
