@@ -34,7 +34,7 @@ testVirtuous = do
   print $ virtuousFraction' alsoBad
   print $ virtuousFraction' shouldWork
   print $ virtuousFraction' shouldAlsoWork
-
+  
 main :: IO () 
 main = do
   let parseFraction' =
