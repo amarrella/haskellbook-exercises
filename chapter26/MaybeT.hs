@@ -1,6 +1,10 @@
 {-# LANGUAGE InstanceSigs #-}
 module MaybeT where
 
+import Control.Monad
+import Control.Monad.Trans.Class
+import Control.Monad.IO.Class
+
 newtype MaybeT m a =
   MaybeT { runMaybeT :: m (Maybe a) }
 
@@ -27,3 +31,9 @@ instance (Monad m)
       case v of
         Nothing -> return Nothing
         Just y  -> runMaybeT (f y)
+
+instance MonadTrans MaybeT where
+  lift = MaybeT . liftM Just
+
+instance (MonadIO m) => MonadIO (MaybeT m) where
+  liftIO = lift . liftIO

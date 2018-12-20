@@ -1,4 +1,5 @@
 import Control.Monad.Trans.Class
+import Control.Monad.IO.Class
 import Control.Monad
 
 newtype EitherT e m a =
@@ -46,3 +47,6 @@ eitherT f g (EitherT amb) = do
 
 instance MonadTrans (EitherT e) where
   lift = EitherT . liftM Right
+
+instance (MonadIO m) => MonadIO (EitherT e m) where
+  liftIO = lift . liftIO
