@@ -31,16 +31,29 @@ popS (QueueS [])   = Nothing
 popS (QueueS as)   = Just(x, QueueS xs) 
   where (x:xs) = reverse as
 
-pushPop :: a -> Queue a -> a
-pushPop a qa = x
-  where Just(x, _) = pop (push a qa)
+popAll :: Queue a -> Maybe a
+popAll qa =
+  case pop qa of 
+    Nothing -> Nothing
+    Just (x, qa') -> popAll qa'
 
-pushPopS :: a -> QueueS a -> a
-pushPopS a qa = x
-  where Just(x, _) = popS (pushS a qa)
+pushPop :: [a] -> Maybe a
+pushPop as = 
+  let q = foldr push empty as in
+    popAll q
+
+popAllS :: QueueS a -> Maybe a
+popAllS qa =
+  case popS qa of 
+    Nothing -> Nothing
+    Just (x, qa') -> popAllS qa'
+
+pushPopS :: [a]-> Maybe a
+pushPopS as =
+  let q = foldr pushS emptyS as in popAllS q
 
 main :: IO ()
 main = defaultMain
-  [ bench "pushPop Queue" $ whnf pushPop 1000
-  , bench "pushPop QueueS" $ whnf pushPopS 1000
+  [ bench "pushPop Queue" $ whnf pushPop [1..100]
+  , bench "pushPop QueueS" $ whnf pushPopS [1..100]
   ]
