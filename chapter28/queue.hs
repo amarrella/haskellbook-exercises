@@ -14,7 +14,7 @@ push a (Queue e d) = Queue (a:e) d
 pop :: Queue a -> Maybe (a, Queue a)
 pop (Queue [] [])   = Nothing
 pop (Queue e (x:xs))  = Just (x, Queue e xs)
-pop (Queue (x:xs) []) = Just (x, Queue xs (reverse xs))
+pop (Queue xs []) = pop (Queue [] (reverse xs))
 
 newtype QueueS a =
   QueueS [a] 
