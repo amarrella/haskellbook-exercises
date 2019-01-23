@@ -1,7 +1,7 @@
 module Vigenere where
 
 import System.Environment (getArgs)
-import System.IO (hIsEOF, hGetChar, hPutStr, stdin, stdout, Handle)
+import System.IO (hIsEOF, hGetChar, hPutStr, stdin, stdout, hWaitForInput, stderr, Handle)
 import qualified Cipher as C
 
 data Mode = Encrypt | Decrypt deriving Show
@@ -16,7 +16,7 @@ readInput :: Handle -> IO String
 readInput h = go []
   where go input = do
           eof <- hIsEOF h
-          if (eof) then pure (reverse input) else do
+          if eof then pure (reverse input) else do
               c <- hGetChar h
               go (c:input)
 
@@ -26,9 +26,12 @@ main = do
   let parsed = parse args
   let mode = getMode parsed
   let key = getKey parsed
-  input <- readInput stdin
-  let output = case mode of 
-                Encrypt -> C.getContent $ C.vigenere key (C.Msg input)
-                Decrypt -> C.getMsg $ C.unVigenere key (C.Encrypted input)
-  hPutStr stdout output
+  intime <- hWaitForInput stdin 5000 
+  if not intime then error "Waited too long!"
+  else do
+    input <- readInput stdin
+    let output = case mode of 
+                  Encrypt -> C.getContent $ C.vigenere key (C.Msg input)
+                  Decrypt -> C.getMsg $ C.unVigenere key (C.Encrypted input)
+    hPutStr stdout output
   
